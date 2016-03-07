@@ -3,13 +3,13 @@
 \usepackage{parskip}
 \usepackage{hyperref}
 \usepackage{xcolor}
-\usepackage{csquotes}
 \usepackage{geometry}
+\usepackage[acronym]{glossaries}
 
 \title{Smart Grids}
 \author{\begin{tabular}{lr}
 Daan Schipper & 4155270 \\ 
-Jan-Willem Manenschijn & \\ 
+Jan-Willem Manenschijn & 4148509\\ 
 Mathijs Hoogland & 4237676 \\ 
 Owen Huang & 4317459 \\ 
 Ruben Starmans & 4141792 \\ 
@@ -22,8 +22,17 @@ a4paper,
 total={180mm,230mm}
 }
 \setlength{\columnsep}{8mm}
+\setlength{\parindent}{10ex}
+
+\renewenvironment{quote}
+{\small\list{}{\rightmargin=5mm \leftmargin=5mm}%
+   \item\relax}
+  {\endlist}
 
 \newcommand{\todo}[1]{{\color{red}\textbf{TODO:} #1}}
+
+% Generate the glossary
+\makeglossaries
 
 % --------------------------------------------
 % Begin of document
@@ -31,6 +40,14 @@ total={180mm,230mm}
 
 \begin{document}
 \maketitle
+
+% --------------------------------------------
+% Glossary definitions
+% --------------------------------------------
+%\newglossaryentry{dms}{name=DMS, description={Demand Side Management}}
+\newacronym{dms}{DMS}{Demand Side Management}
+\newacronym{ev}{EV}{Electronic Vehicle}
+\newacronym{vpp}{VPP}{Virtual Power Plant}
 
 \tableofcontents
 
@@ -41,7 +58,6 @@ total={180mm,230mm}
 \include{chapters/introduction_smart_grid}
 \include{chapters/challenges_smart_grid}
 \include{chapters/game_theory_intro}
-\include{chapters/issues_using_game_theory}
 \include{chapters/use_of_game_theory}
 \include{chapters/use_of_game_theory/microgrids}
 \include{chapters/use_of_game_theory/demand_side_management}
@@ -52,7 +68,7 @@ total={180mm,230mm}
 % REFERENCES
 % --------------------------------------------
 
-\bibliographystyle{plain}
+\bibliographystyle{ieeetr}
 \bibliography{bibliography}	
 
 \end{document}
