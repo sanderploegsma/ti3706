@@ -4,6 +4,7 @@
 \usepackage{hyperref}
 \usepackage{xcolor}
 \usepackage{geometry}
+\usepackage[acronym]{glossaries}
 
 \title{Smart Grids}
 \author{\begin{tabular}{lr}
@@ -29,12 +30,21 @@ total={180mm,230mm}
 
 \newcommand{\todo}[1]{{\color{red}\textbf{TODO:} #1}}
 
+% Generate the glossary
+\makeglossaries
+
 % --------------------------------------------
 % Begin of document
 % --------------------------------------------
 
 \begin{document}
 \maketitle
+
+% --------------------------------------------
+% Glossary definitions
+% --------------------------------------------
+%\newglossaryentry{dms}{name=DMS, description={Demand Side Management}}
+\newacronym{dms}{DMS}{Demand Side Management}
 
 \tableofcontents
 
