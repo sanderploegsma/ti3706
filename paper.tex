@@ -3,7 +3,6 @@
 \usepackage{parskip}
 \usepackage{hyperref}
 \usepackage{xcolor}
-\usepackage{csquotes}
 \usepackage{geometry}
 
 \title{Smart Grids}
@@ -22,6 +21,11 @@ a4paper,
 total={180mm,230mm}
 }
 \setlength{\columnsep}{8mm}
+
+\renewenvironment{quote}
+{\small\list{}{\rightmargin=5mm \leftmargin=5mm}%
+   \item\relax}
+  {\endlist}
 
 \newcommand{\todo}[1]{{\color{red}\textbf{TODO:} #1}}
 
@@ -52,7 +56,7 @@ total={180mm,230mm}
 % REFERENCES
 % --------------------------------------------
 
-\bibliographystyle{plain}
+\bibliographystyle{ieeetr}
 \bibliography{bibliography}	
 
 \end{document}
