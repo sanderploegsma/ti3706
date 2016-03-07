@@ -1,7 +1,9 @@
 \section{Challenges in the smart grid}
-
+Before a reliable smart grid can be realised, a number of challenges arise that need to be conquered. Some of these challenges are quite trivial and also apply to other fields in technology. Others are quite specific to energy grids and probably need a lot more work before all the flaws are ironed out.
+\todo{Improve this}
+ 
 \subsection{Security}
-\todo{Wederom een schaamteloze kopie uit \cite{McDanielMcLaughlin2009a}}
+\todo{Pretty much copied from \cite{McDanielMcLaughlin2009a}, needs rewrite and alternative views}
 
 Although deploying the smart grid has enormous social and technical benefits, several security and privacy concerns arise. Because grid customers are connected over a vast network of computerised meters and infrastructure, they and the infrastructure itself become vulnerable to scalable network-borne attacks. These meters make excellent targets for malicious hackers, largely because vulnerabilities can easily be monetised. Compromised meters allow users to manipulate their usage data or energy costs. Customer fraud is not the only problem that arises, the costs of patching hundreds of millions of meters also plays a big role. 
 
@@ -40,12 +42,3 @@ The smart meter is capable of temporarily decreasing the load on the grid. Durin
 This 'management of demand' can be developed even further when the smart meter is able to use batteries. A household could supply energy to the grid instead of using energy from the grid, by discharging a battery (of for instance an EV) and thus creating a power surplus for a moderate amount of time \cite{MwasiluJustoKimEtAl2014}. 
 
 Smart meters have one security related issue though. When an household is using a smart meter, all energy consumption is logged very precisely. This data can be analyzed too reconstruct the life pattern of an entire household. Information about sleeping patterns, times consumer are at home and the amount of people living in a given household can all be derived from the information a smart meter stores \cite{Molina-MarkhamShenoyFuEtAl2010}. This privacy threat needs to be accounted for. Smart meter data should be used in clusters or aggregates in order to ensure the privacy of it's users.
-
-\subsection{Virtual Power Plants}
-Another way the manage the load of the smart grid is to manage all the energy sources the grid contains. All new kinds of energy sources are coming available. Solar energy is growing, the number of EV's is increasing but also emergency backup generators can be used in the idea of a Virtual Power Plant(VPP). 
-
-The VPP is the control center of the aggregation of all the different sources. It keeps track of the demand and the supply at any given time. In the demand side management the people are incentivised to lower their use during peaks. In addition to this the VPP acts like a sort of safety net if the supply cannot meet the demand, or if it gets too expensive to generate enough energy. \cite{vpprealenergy}
-
-If the demand peak is too high the different energy sources can deliver power back to the grid. An EV can discharge its battery and charge back up later when the electricity is cheaper. The backup generators of hospitals or commercial buildings can also be used to help meet the demand. The VPP makes the use of all these different sources more manageable. Also, it can optimise the use of all the available energy resources to decrease the cost of the energy.\cite{microgridsmarketenv}
-\todo{moet naar Game theory -> Micro grids}
-
