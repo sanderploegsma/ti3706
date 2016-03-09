@@ -28,8 +28,15 @@ total={180mm,230mm}
    \item\relax}
   {\endlist}
 
-\newcommand{\todo}[1]{{\color{red}\textbf{TODO:} #1}}
-\newcommand{\fb}[1]{{\color{blue}\textbf{FEEDBACK:} #1}}
+\definecolor{todo}{RGB}{3,166,90}
+\definecolor{fix}{RGB}{217,61,61}
+\definecolor{feedback}{RGB}{80,180,191}
+\definecolor{improve}{RGB}{217,195,89}
+
+\newcommand{\todo}[1]{{\color{todo}\textbf{TODO:} #1}}
+\newcommand{\improve}[1]{{\color{improve}\textbf{IMPROVE: } #1}}
+\newcommand{\fix}[1]{{\color{fix}\textbf{FIX: } #1}}
+\newcommand{\fb}[1]{{\color{feedback}\textbf{FEEDBACK:} #1}}
 
 % Generate the glossary
 \makeglossaries
