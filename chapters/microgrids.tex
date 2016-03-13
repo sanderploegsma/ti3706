@@ -1,19 +1,25 @@
 \section{Microgrids }
-Dividing the smart-grid into subgrids is a logical thing to do, as current electricity grids, while they're just a one-way communication, are already split up. [Needs citations] See the "verdeelkastjes" which can be seen in every neighbourhood. Besides having a great structure with less risks [citation needed], dividing smart-grids into sub-grids and eventually microgrids \todo{ Explain the differences between sub-grids and microgrids or remove} has even more advantages. \todo{Citations needed!}
+Dividing the smart-grid into subgrids is a logical thing to do, as current electricity grids, while they're just a one-way communication, are already split up. [Needs citations] See the "verdeelkastjes" which can be seen in every neighbourhood. Besides having a great structure with less risks [citation needed], dividing smart-grids into sub-grids and eventually microgrids \todo{ Explain the differences between sub-grids and microgrids or remove} has even more advantages. \todo{Citations needed!} Microgrids make use of so called \glspl{vpp}. First \glspl{vpp} will be addressed before game theoretic techniques are \todo{translate: uiteengezet} for the use and \todo{translate: nut} of microgrids. \improve{Not satisfied with this introduction}
 
+\subsection{\acrlong{vpp}}
+When researching \glspl{vpp} and their use in microgrids, no definitive definition can be found for a \gls{vpp}. A nice view is given by Mashhour et al. \cite{MashhourMoghaddas-Tafreshi2011} and Nikonowicz et al. \cite{NikonowiczMilewski2012}. Some definitions could even been seen as a simple version of a microgrid, aggregating and controlling a whole neighbourhood \cite{Kumagai2012} and thus making the difference between a microgrid and a \gls{vpp} only a thin line. For the convinience of the use of \glspl{vpp} in microgrids, we stick to the following definition:
+
+A \gls{vpp} is a control center or an aggregation of (different kinds) energy sources, such as renewable and nonrenewable generators, and will appear onto the market as if it is only \'one power plant. It keeps track of it's energy sources' supplies and determines the price. Communication for it's energy sources is directed to the VPP, which determines it's price according to its supply and the demand. VPP's can be very efficient, as they can combine different energy sources to generate a continuous supply. In other words, resources with different weaknesses and strengths are combined in a complementary way\cite{Koeppel2003}. For example, when a wind turbine and solar cells are combined, the VPP's is less subject to \todo{translate: gevoelig} changing weather conditions. \cite{Tromly2001}\cite{Kumagai2012}\cite{MashhourMoghaddas-Tafreshi2011}\cite{NikonowiczMilewski2012}
+
+\glspl{vpp} are widely used in microgrids, as they make pricing of electricity for a combination of (closely located) energy sources pretty convinient. \todo{elaborate why microgrids are used commonly in microgrids}
+
+\subsection{Game of perfect information}
 When using microgrids, a game theory called \emph{a dynamic game of perfect information} \todo{ Explain what this game method is} can be used to create an equilibrium in microgrids. Because the number of players is limited in a microgrid, both for the demand side as well as the supply side within a microgrid, it is less complex and time consuming to calculate the best options considering each players' wishes. Then, a price can be determined by a Aggregator, who can decide whether to buy or sell electricity for the whole microgrid \cite{MicrogridModellingPetrosAristidou}\linebreak \indent
+
+\subsection{Localized microgrids vs Virtual microgrids}
+\todo{find good paper for this difference}
 Energy loss reduction is one of the advantages when using microgrids in a smart way. Power waste is mainly do two two factors\cite{EnergyLossURL}: 1) Power transmission from energy plants to local distributors, is done trough power lines, having losses due to for example heat. 2) Transformers. Each transformer has a certain efficiency, which is never 100\%. The less transformers, the less energy loss.\linebreak \indent
 Microgrids will be able to reduce the waste of power because within microgrids generated power can be used for local demand and can communicate with other nearby microgrids. Besides it can help avoid the power losses in substation\'s transformers\cite{keypaper}.
-
-\todo{potluck problem}
-\todo{autonomous mode (island) VS cooperative VS local cooperative mode }
 \todo{parking spots as microgrid source}
 
-The VPP is the control center of the aggregation of all the different sources. It keeps track of the demand and the supply at any given time. In the demand side management the people are incentivised to lower their use during peaks. In addition to this the VPP acts like a sort of safety net if the supply cannot meet the demand, or if it gets too expensive to generate enough energy. \cite{Kumagai2012}
+\subsection{Co-operation strategies for microgrids}
+\todo{autonomous mode (island) VS cooperative VS local cooperative mode }
 
-Almost all current solutions using microgrids make use of so called Virtual Power Plants(VPP).\cite{Kumagai2012} \todo{[More Citations needed]}. VPP's can be modelled in different ways. They can be an aggregation which combines different energy sources to ensure a more stable energy source\cite{Kumagai2012}. A VPP can for example manage a wind turbine and solar panels, so combined it can supply power at any weather condition. 	
-
-\todo{rewrite the following two chapters}
+\todo{potluck problem, forgot what this is haha}
 
 
-If the demand peak is too high the different energy sources can deliver power back to the grid. An EV can discharge its battery and charge back up later when the electricity is cheaper. The backup generators of hospitals or commercial buildings can also be used to help meet the demand. The VPP makes the use of all these different sources more manageable. Also, it can optimise the use of all the available energy resources to decrease the cost of the energy.\cite{microgridsmarketenv}
