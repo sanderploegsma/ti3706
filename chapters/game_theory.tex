@@ -1,7 +1,6 @@
 \section{Introduction to Game Theory}
 As seen in the previous chapters technical challenges arise with the introduction of smart grids. Game theory, in combination with Multi Agent Systems (MAS), plays a significant role in the development of smart grids. Game theory is used together with agent-based techniques to optimally allocate re-sources among involved actors, such as renewable energy sources \cite{nguyen2013game}. Game theory concepts provide us with a language to formulate, structure, analyse and understand strategic scenarios.
 
-\todo{Veel gebruikte games in GT toevoegen}
 \subsection{Nash equilibrium}
 The most commonly used solution concept in game theory is that of Nash equilibrium \cite{CourseInGameTheory}. In this concept, each player is assumed to know the equilibrium strategies of the other players. The equilibrium is reached when each player isn't helped by changing it's own state (assuming all other players don't change their state). A lot of games used in the microgrids also try to find this equilibrium, we will discuss a couple of them in more detail in the next chapter.
 
@@ -28,11 +27,15 @@ Two suspects of a crime are arrested and imprisoned separately. If they both con
 
 In table \ref{prisoners-d} you see all options for the prisoner's dilemma modeled in a table. If the prisoners want the total number of years in prison to be as low as possible, they should both be silent. Interesting however is that each player has an incentive to confess. No matter what is choses by one player, the other player benefits to confess. This is why the Nash equilibrium for this game is (Confess, Confess).    
 
-Game theory can provide the necessary techniques to analyse problems such as the Prisoner's Dilemma. A well known solution concept is the pursue to find a Nash equilibrium, this is the state in which no player can benefit by changing its strategy while the other players keeps theirs unchanged. In this example it would be the situation where both A and B betray each other.
-
-
-
-
+\subsection{Examples of commonly used games}
+\subsubsection{Auctions}
+Auctions are often used in games to decide for what price power should be bought or sold. First-price auctions are auctions where bidders submit bids, and the highest bidder wins and pays the winning bid. Second-price auctions are auctions where also the highest bidder wins, but where the bidder pays a price equal to the second highest bid. Second-price bids are for example used in \cite{SaadHanPoorEtAl2011} because this type of auction is strategy proof. This means that players wil give the price that they wan't to pay, and don't try to fool others with fake bids\todo{Even iets anders formuleren}.
+\subsubsection{Bayesian games}
+\todo{Stukje over Bayesian games afmaken}
+\subsubsection{Stochastic games}
+\todo{Stukje over Stochastic games afmaken}
+\subsubsection{Stackelberg games}
+In a Stackelberg game there is a player who takes on the role of the \textit{leader} and another player who is the \textit{follower}. The leader will then try to enforce its strategy onto the follower. \cite{ShohamLeyton-Brown2008}.
 \subsection{Game Theory applied to Smart Grids}
 When researching game theoretic approaches to manage and run Smart Grids, one will find out that a distinction can be made for different kind of subproblems arising in smart-grids research \cite{keypaper}. In this paper the focus lies on the use of microgrids and the demand side management. First the microgrids are discussed, which can help tackle complex challenges and solve efficiency issues. Secondly the \gls{dsm} is discussed. \gls{dsm} will help in locating and solving issues involving the end user. 
 
