@@ -1,13 +1,13 @@
 \section{Game Theory}
-As seen in the previous chapters technical challenges arise with the introduction of smart grids. Game theory, in combination with Multi Agent Systems (MAS), plays a significant role in the development of smart grids. Game theory is used together with agent-based techniques to optimally allocate re-sources among involved actors, such as renewable energy sources \cite{nguyen2013game}. Game theory concepts provide us with a language to formulate, structure, analyse and understand strategic scenarios.
+As seen in the previous chapters technical challenges arise with the introduction of smart grids. Game theory, in combination with \gls{mas}, plays a significant role in the development of smart grids. Game theory concepts provide us with a language to formulate, structure, analyse and understand strategic scenarios.
 
 \subsection{Nash equilibrium}
-The most commonly used solution concept in game theory is that of Nash equilibrium \cite{CourseInGameTheory}. In this concept, each player is assumed to know the equilibrium strategies of the other players. The equilibrium is reached when each player isn't helped by changing it's own state (assuming all other players don't change their state). A lot of games used in the microgrids also try to find this equilibrium, we will discuss a couple of them in more detail in the next chapter.
+The most commonly used solution concept in game theory is that of Nash equilibrium \cite{CourseInGameTheory}. In this concept, each player is assumed to know the equilibrium strategies of the other players. The equilibrium is reached when each player isn't helped by changing it's own state, with the assumption that all other players don't change their state. A lot of games used in the microgrids also try to find this equilibrium, we will discuss a couple of them in more detail in the next chapter.
 
 \subsection{Cooperative vs Noncooperative game theory} 
 We divide game theory into two main branches: noncooperative game theory and cooperative game theory. Noncooperative game theory is used in the strategic decision-making processes of a number of entities that are independent in their decision making, and have a partially or totally conflicting interest over the outcome of a decision process that is affected by their actions\cite{keypaper}. In cooperative game theory, it is possible to model binding agreements between entities and strategies can be shared. 
 
-It is important to note that noncooperative doesn't always imply that the players are not competing \todo{Kan iemand even verifieren dat het zo goed is? (Dus that players are not competing ipv cooperating)}, it means that cooperations that arises must be self-enforcing with no communication or coordination of strategic choices among the players.\cite{keypaper}
+It is important to note that noncooperative doesn't always imply that the players are not competing, any cooperation that arises must be self-enforcing with no communication or coordination of strategic choices among the players.\cite{keypaper}
 
 \subsection{Prisoner's Dilemma}
 One of the most famous examples that illustrates a situation that can be modelled by game theory is the Prisoner's Dilemma. This is an example which was formalised by Poundstone \cite{poundstone} and goes as follows: 
@@ -16,14 +16,14 @@ Two suspects of a crime are arrested and imprisoned separately. If they both con
 
 \begin{table}[h]
 \centering
-\label{prisoners-d}
 \begin{tabular}{lll}
  & Silent & Confess \\ \cline{2-3} 
 \multicolumn{1}{l|}{Silent} & \multicolumn{1}{l|}{1,1} & \multicolumn{1}{l|}{0,3} \\ \cline{2-3} 
 \multicolumn{1}{l|}{Confess} & \multicolumn{1}{l|}{3,0} & \multicolumn{1}{l|}{2,2} \\ \cline{2-3} 
 \end{tabular}
 \caption{Prisoners dilemma options}
-\end{table}`
+\label{prisoners-d}
+\end{table}
 
 In table \ref{prisoners-d} you see all options for the prisoner's dilemma modeled in a table. If the prisoners want the total number of years in prison to be as low as possible, they should both be silent. Interesting however is that each player has an incentive to confess. No matter what is choses by one player, the other player benefits to confess. This is why the Nash equilibrium for this game is (Confess, Confess).    
 
@@ -57,4 +57,4 @@ Using the following terms:
 	\item Scalability (is the game applicable on a large scale or only in a small local market?)
 	\item Interoperability (how does the game do in multiple contexts, f.e. in context of DER?)
 	\item Realism (is the representation of the game realistic in a real world application?)
-\end{itemize}
+\end{itemize
