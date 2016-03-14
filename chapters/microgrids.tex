@@ -8,24 +8,24 @@ When researching \glspl{vpp} and their use in microgrids, no definitive definiti
 
 A \gls{vpp} is a control center or an aggregation of (different kinds) energy sources, such as renewable and nonrenewable generators, and will appear onto the market as if it is only one power plant. It keeps track of its energy sources' supplies and determines the price. Communication for its energy sources is directed to the \gls{vpp}, which determines its price according to its supply and the demand. \glspl{vpp} can be very efficient, as they can combine different energy sources to generate a continuous supply. In other words, resources with different weaknesses and strengths are combined in a complementary way \cite{Koeppel2003}. For example, when a wind turbine and solar cells are combined, the \gls{vpp} is less subject to changing weather conditions \cite{Tromly2001, Kumagai2012, MashhourMoghaddas-Tafreshi2011, NikonowiczMilewski2012}.
 
-\glspl{vpp} are widely used in microgrids, as they make pricing of electricity for a combination of (closely located) energy sources pretty convenient. \todo{elaborate why microgrids are used commonly in microgrids}
+\glspl{vpp} are widely used in microgrids, as they make pricing of electricity for a combination of (closely located) energy sources pretty convenient. \todo{elaborate why VPPs are used commonly in microgrids}
 
 \subsection{Game of perfect information}
-When using microgrids, a game theory called \emph{a dynamic game of perfect information} \todo{ Explain what this game method is} can be used to create an equilibrium in microgrids. Because the number of players is limited in a microgrid, both for the demand side as well as the supply side within a microgrid, it is less complex and time consuming to calculate the best options considering each players' wishes. Then, a price can be determined by a Aggregator, who can decide whether to buy or sell electricity for the whole microgrid \cite{MicrogridModellingPetrosAristidou}.
+When using microgrids, a game theory called \emph{a dynamic game of perfect information} can be used to create an equilibrium in microgrids. This is a game in which each player, when making a decision, is informed of all the events that previously occurred\cite{CourseInGameTheory}. Because the number of players is limited in a microgrid, both for the demand side as well as the supply side, it is less complex and time consuming to calculate the best options considering each players' wishes. Then, a price can be determined by a Aggregator, who can decide whether to buy or sell electricity for the whole microgrid \cite{MicrogridModellingPetrosAristidou}.
 
-\subsection{Localised microgrids vs Virtual microgrids}
+\subsection{Localised and virtual microgrids}
 \todo{find good paper for this difference}
-Energy loss reduction is one of the advantages when using microgrids in a smart way. Power waste is mainly do two two factors \cite{EnergyLossURL}: 
+Energy loss reduction is one of the advantages when using microgrids in a smart way. The loss of energy is caused mainly by two factors \cite{EnergyLossURL}: 
 
 \begin{enumerate}
-\item Power transmission from energy plants to local distributors, is done trough power lines, having losses due to for example heat.
-\item Transformers. Each transformer has a certain efficiency, which is never 100\%. The less transformers, the less energy loss.
+\item Energy transmission from power plants to local distributors is done trough power lines, which suffer from losses due to i.e. heat generation.
+\item In an energy grid, each transformer has a certain efficiency, which is never 100\%. Reducing the number of transformers will reduce overall energy loss.
 \end{enumerate}
 
-Microgrids will be able to reduce the waste of power because within microgrids generated power can be used for local demand and can communicate with other nearby microgrids. Besides it can help avoid the power losses in substation's transformers \cite{keypaper}.
+Microgrids will be able to reduce energy loss because within microgrids generated power can be used for local demand and can communicate with other nearby microgrids. It can also help to avoid the power losses found in a substation's transformer \cite{keypaper}.
 \todo{parking spots as microgrid source}
 
-\subsection{Co-operation strategies for microgrids}
+\subsection{Cooperation strategies}
 \todo{autonomous mode (island) VS cooperative VS local cooperative mode }
 
 \todo{potluck problem, forgot what this is haha}
