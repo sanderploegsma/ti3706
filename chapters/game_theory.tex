@@ -3,6 +3,8 @@ As seen in the previous chapters technical challenges arise with the introductio
 
 \subsection{Nash equilibrium}
 The most commonly used solution concept in game theory is that of Nash equilibrium \cite{CourseInGameTheory}. In this concept, each player is assumed to know the equilibrium strategies of the other players. The equilibrium is reached when each player isn't helped by changing it's own state, with the assumption that all other players don't change their state. A lot of games used in the microgrids also try to find this equilibrium, we will discuss a couple of them in more detail in the next chapter.
+\todo{translate:tot nu toe} The hardes challenge in finding a nash equilibrium is not formulating an algorithm, but formulating a efficient algorithm is. This is a notorious problem as it is described as the "most fundamental computational problem" by Papdimitriou in 2001. It is still of unknown complexity, but it should be efficiently computed before it can used in smart meters. A new question arises, \emph{Is there a an efficient algorithm for computeing a nash equilibrium?} Although in many strategic interactions (games) the answer is negative, in some games Nash Equilibrium can be compute directly or approximated with the use of an heuristic method\cite{MicrogridModellingPetrosAristidou}\cite{AumannGameTheoryAccomplish}
+
 
 \subsection{Cooperative vs Noncooperative game theory} 
 We divide game theory into two main branches: noncooperative game theory and cooperative game theory. Noncooperative game theory is used in the strategic decision-making processes of a number of entities that are independent in their decision making, and have a partially or totally conflicting interest over the outcome of a decision process that is affected by their actions\cite{keypaper}. In cooperative game theory, it is possible to model binding agreements between entities and strategies can be shared. 
@@ -40,6 +42,10 @@ Almost all games are based on stochastic models. A stochastic game is a dynamic 
 Bayesian games are a noncooperative game in game theory where the information about the strategies and objective function of the other players is incomplete. These games are hard to model and not a lot of research has yet been done on possible usage in smart grids. Given the large nature of the smart grid, the amount of players involved, it is quite possible that players in any game model might face technical difficulties in estimating the strategies or objectives of the other players \cite{keypaper}. With this in mind, bayesian games can overcome a lot of these difficulties. 
 \paragraph{Stackelberg games}
 In a Stackelberg game there is a player who takes on the role of the \textit{leader} and another player who is the \textit{follower}. The leader will then try to enforce its strategy onto the follower \cite{ShohamLeyton-Brown2008}.
+
+\paragraph{Game of perfect information}
+\todo{Stukje over Game of Perfect information afmaken}
+
 
 \subsection{Game Theory applied to Smart Grids}
 When researching game theoretic approaches to manage and run Smart Grids, one will find out that a distinction can be made for different kind of subproblems arising in smart-grids research \cite{keypaper}. In this paper the focus lies on the use of microgrids and the demand side management. First the microgrids are discussed, which can help tackle complex challenges and solve efficiency issues. Secondly the \gls{dsm} is discussed. \gls{dsm} will help in locating and solving issues involving the end user. 
