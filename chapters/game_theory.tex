@@ -2,7 +2,7 @@
 As seen in the previous chapters technical challenges arise with the introduction of smart grids. Game theory, in combination with \gls{mas}, plays a significant role in the development of smart grids. Game theory concepts provide us with a language to formulate, structure, analyse and understand strategic scenarios.
 
 \subsection{Formal Definition}
-We can define game theoretic games within the smart grid as finite n-unit normal form games with parameters: $\langle A,Act,C,g,\mu \rangle$ \cite{CourseInGameTheory}. \\
+We can define game theoretic games within the smart grid as finite n-unit normal form games with parameters: $\langle A,Action,C,g,\mu \rangle$ \cite{CourseInGameTheory}. \\
 \begin{itemize}
     \item $A = {1 ... n }$ is a set of agents.
     \item $Action = A_{1} ... A_{i} ... A_{n}$, where $A_{i}$ is the set of actions a given agent $i$ can choose from.
@@ -14,7 +14,7 @@ We can define game theoretic games within the smart grid as finite n-unit normal
 
 \paragraph{Nash equilibrium} 
 The most commonly used solution concept in game theory is that of Nash equilibrium \cite{CourseInGameTheory}. In this concept, each agent is assumed to know the equilibrium strategies of the other agents. The equilibrium is reached when each player isn't helped by changing it's own state, with the assumption that all other players don't change their state. 
-This can be formalized as $\forall i: s^{*}_{i}$ is the best choice for agent $i$ assuming al other agents choose solution $s^{*}_{x}$, for $x : \{1...n\}$. 
+This can be formalized as $\forall i: s^{*}_{i}$ is the best choice for agent $i$, maximuzing it's payoff, assuming al other agents choose solution $s^{*}_{x}$, for $x : \{1...n\}$. 
 
 \paragraph{Computational challenge}
 The hardest challenge is not finding a Nash equilibrium, but formulating an efficient algorithm. This notorious problem is described by Papdimitriou as 'the most fundamental computational problem whose complexity is wide open'\cite{daskalakis2009complexity}. Although in many strategic interactions (games) the answer is negative, in some games Nash Equilibrium can be compute directly or approximated with the use of an heuristic method\cite{MicrogridModellingPetrosAristidou,AumannGameTheoryAccomplish} 
@@ -30,7 +30,22 @@ It is important to note that noncooperative doesn't always imply that the player
 \subsubsection{Prisoner's Dilemma}
 One of the most famous examples that illustrates a situation that can be modelled by game theory is the Prisoner's Dilemma. This is an example which was formalised by Poundstone \cite{poundstone} and goes as follows: 
 
-Two suspects of a crime are arrested and imprisoned separately. If they both confess, each will be convicted to go to jail for 2 years. If only 1 suspect confesses, he wil be used as a witness against the other suspect. The witness wil be set free, the other suspect wil go to jail for 3 years. If they both remain silent, both of them will only serve 1 year in prison.
+Two suspects of a crime are arrested and imprisoned separately. If they both confess, each will be convicted to go to jail for 2 years. If only 1 suspect confesses, he wil be used as a witness against the other suspect. The witness wil be set free, the other suspect wil go to jail for 3 years. If they both remain silent, both of them will only serve 1 year in prison.\\
+This game can be formalized using $\langle A,Action,C,g,\mu \rangle$ as:
+
+\begin{itemize}
+    \item $A = \{S_{1}, S_{2} \}$ the suspects are the players.
+    \item $Action_{1} = Action_{2} = \{S, C\}$ Silent or Confess.
+    \item $C = \{c_{1},c_{2},c_{3},c_{4}\}$, both serve 1 year, both serve 2 years, or one goes free and the other serves 3 years.
+    \item $g((S,S)) = c_{1}$, \\
+    $g((C,C)) = c_{2}$, \\
+    $g((S,C)) = c_{3}$, \\
+    $g((C,S)) = c_{4}$.
+    \item $\mu S_{1}(c_{1}) = \mu S_{2}(c_{1}) = 1$, \\
+    $\mu S_{1}(c_{2}) = \mu S_{2}(c_{2}) = 2$, \\
+    $\mu S_{1}(c_{3}) = \mu S_{2}(c_{4}) = 0$, \\
+    $\mu S_{1}(c_{4}) = \mu S_{2}(c_{3}) = 3$.
+\end{itemize}
 
 \begin{table}[h]
 \centering
@@ -43,7 +58,7 @@ Two suspects of a crime are arrested and imprisoned separately. If they both con
 \label{prisoners-d}
 \end{table}
 
-In table \ref{prisoners-d} you see all options for the prisoner's dilemma modeled in a table. If the prisoners want the total number of years in prison to be as low as possible, they should both be silent. Interesting however is that each player has an incentive to confess. No matter what is choses by one player, the other player benefits to confess. This is why the Nash equilibrium for this game is (Confess, Confess).    
+In table \ref{prisoners-d} you see all options for the prisoner's dilemma modeled in an easier to read table format. If the prisoners want the total number of years in prison to be as low as possible, they should both be silent. Interesting however is that each player has an incentive to confess. No matter what is choses by one player, the other player benefits to confess. This is why the Nash equilibrium for this game is (Confess, Confess).    
 
 \subsection{Examples of commonly used game theory concepts}
 In this subsection we will discuss some game theory concepts used in the following chapters. \improve{Extend explanation why we chose these problems}
