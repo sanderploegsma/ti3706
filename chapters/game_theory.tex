@@ -1,4 +1,4 @@
-\section{Introduction to Game Theory}
+\section{Game Theory}
 As seen in the previous chapters technical challenges arise with the introduction of smart grids. Game theory, in combination with \gls{mas}, plays a significant role in the development of smart grids. Game theory concepts provide us with a language to formulate, structure, analyse and understand strategic scenarios.
 
 \subsection{Nash equilibrium}
@@ -6,7 +6,7 @@ The most commonly used solution concept in game theory is that of Nash equilibri
 \todo{translate:tot nu toe} The hardes challenge in finding a nash equilibrium is not formulating an algorithm, but formulating a efficient algorithm is. This is a notorious problem as it is described as the "most fundamental computational problem" by Papdimitriou in 2001. It is still of unknown complexity, but it should be efficiently computed before it can used in smart meters. A new question arises, \emph{Is there a an efficient algorithm for computeing a nash equilibrium?} Although in many strategic interactions (games) the answer is negative, in some games Nash Equilibrium can be compute directly or approximated with the use of an heuristic method\cite{MicrogridModellingPetrosAristidou}\cite{AumannGameTheoryAccomplish}
 
 
-\subsection{Cooperative vs Noncooperative game theory}
+\subsection{Cooperative vs Noncooperative game theory} 
 We divide game theory into two main branches: noncooperative game theory and cooperative game theory. Noncooperative game theory is used in the strategic decision-making processes of a number of entities that are independent in their decision making, and have a partially or totally conflicting interest over the outcome of a decision process that is affected by their actions\cite{keypaper}. In cooperative game theory, it is possible to model binding agreements between entities and strategies can be shared. 
 
 It is important to note that noncooperative doesn't always imply that the players are not competing, any cooperation that arises must be self-enforcing with no communication or coordination of strategic choices among the players.\cite{keypaper}
@@ -29,17 +29,26 @@ Two suspects of a crime are arrested and imprisoned separately. If they both con
 
 In table \ref{prisoners-d} you see all options for the prisoner's dilemma modeled in a table. If the prisoners want the total number of years in prison to be as low as possible, they should both be silent. Interesting however is that each player has an incentive to confess. No matter what is choses by one player, the other player benefits to confess. This is why the Nash equilibrium for this game is (Confess, Confess).    
 
-\subsection{Examples of commonly used games}
+\subsection{Examples of commonly used game theory concepts}
+\todo{Stuk mechanism design toevoegen}
+\todo{Toelichting waarom we deze problemen kiezen}
+\todo{Subsubsubsections opchoppen}
 \subsubsection{Auctions}
 Auctions are often used in games to decide for what price power should be bought or sold. First-price auctions are auctions where bidders submit bids, and the highest bidder wins and pays the winning bid. Second-price auctions are auctions where also the highest bidder wins, but where the bidder pays a price equal to the second highest bid. Second-price bids are for example used in \cite{SaadHanPoorEtAl2011} because this type of auction is strategy proof. This means that players wil give the price that they wan't to pay, and don't try to fool others with fake bids\todo{Even iets anders formuleren}.
+\subsubsection{Stochastic games}
+Almost all games are based on stochastic models. A stochastic game is a dynamic play that proceeds from position to position \cite{Shapley1953} and can be played by one or more players. Quite a few papers have been written with stochastic games in the smart grid \cite{LiangZhuang2014} because they are good to characterize the randomness in renewable power generation.  
 \subsubsection{Bayesian games}
 Bayesian games are a noncooperative game in game theory where the information about the strategies and objective function of the other players is incomplete. These games are hard to model and not a lot of research has yet been done on possible usage in smart grids. Given the large nature of the smart grid, the amount of players involved, it is quite possible that players in any game model might face technical difficulties in estimating the strategies or objectives of the other players \cite{keypaper}. With this in mind, bayesian games can overcome a lot of these difficulties. 
+
 \subsubsection{Stochastic games}
 \todo{Stukje over Stochastic games afmaken}
 \subsubsection{Game of perfect information}
 \todo{Stukje over Game of Perfect information afmaken}
+
+
 \subsubsection{Stackelberg games}
-In a Stackelberg game there is a player who takes on the role of the \textit{leader} and another player who is the \textit{follower}. The leader will then try to enforce its strategy onto the follower. \cite{ShohamLeyton-Brown2008}.
+In a Stackelberg game there is a player who takes on the role of the \textit{leader} and another player who is the \textit{follower}. The leader will then try to enforce its strategy onto the follower \cite{ShohamLeyton-Brown2008}.
+
 \subsection{Game Theory applied to Smart Grids}
 When researching game theoretic approaches to manage and run Smart Grids, one will find out that a distinction can be made for different kind of subproblems arising in smart-grids research \cite{keypaper}. In this paper the focus lies on the use of microgrids and the demand side management. First the microgrids are discussed, which can help tackle complex challenges and solve efficiency issues. Secondly the \gls{dsm} is discussed. \gls{dsm} will help in locating and solving issues involving the end user. 
 
