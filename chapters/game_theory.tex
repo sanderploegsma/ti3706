@@ -2,25 +2,29 @@
 As seen in the previous chapters technical challenges arise with the introduction of smart grids. Game theory, in combination with \gls{mas}, plays a significant role in the development of smart grids \cite{keypaper}. Game theory concepts provide us with a language to formulate, structure, analyse and understand strategic scenarios.
 
 \subsection{What is game theory?}
-We can define game theoretic games within the smart grid as finite n-unit normal form games with parameters: $\langle A,Action,C,g,\mu \rangle$ \cite{CourseInGameTheory}. \\
+
+Game theory is the study of mathematical models of conflict and cooperation between intelligent rational decision makers \cite{myerson2013game}. 
+We can define game theoretic games as following
 \begin{itemize}
-    \item $A = \{1 ... n\}$ is a set of agents.
-    \item $Action = \{A_{1} ... A_{i} ... A_{n}$\}, where $A_{i}$ is the set of actions a given agent $i$ can choose from.
-    \item $C$ is the set of consequences.
-    \item $g: Action \to C$ is the mapping of actions to consequences
-    \item $\mu = \langle \mu_{1}, ..., \mu_{i}, ..., \mu_{n}, \rangle $ where $\mu_{i}$ is a payoff function for agent $i$.
+    \item a finite set $N$ (the set of players)
+    \item for each player $i \in N$ a nonempty set $Ai$ (the set of actions available to player $i$)
+    \item for each player $i \in N$ a preference relation $\succsim_i$ on $A = \times_{j \in N}A_j$ (the preference relation of player $i$).
 \end{itemize}
+If the set $A_i$ of actions of every player $i$ is finite then the game is $finite$
+
+The requirement that the preferences of each player i be defined over A, rather than Ai, is the feature that distinguishes a strategic game from a decision problem: each player may care not only about his own action but also about the actions taken by the other players. \cite{CourseInGameTheory}
 
 
 \paragraph{Nash equilibrium} 
-The most commonly used solution concept in game theory is that of Nash equilibrium \cite{CourseInGameTheory}. In this concept, each agent is assumed to know the equilibrium strategies of the other agents. The equilibrium is reached when each player isn't helped by changing it's own state, with the assumption that all other players don't change their state. 
-This can be formalized as $\forall i: s^{*}_{i}$ is the best choice for agent $i$, maximuzing it's payoff, assuming al other agents choose solution $s^{*}_{x}$, for $x : \{1...n\}$. 
+The most commonly used solution concept in game theory is that of Nash equilibrium. This notion captures a steady state of the play of a strategic game in which each player holds the correct expectation about the other players’ behavior and acts rationally. It does not attempt to examine the process by which a steady state is reached.
+The definition of a Nash equilibrium of a strategic game $\langle N, (A_i), (\succsim_i) \rangle $ is a profile $a^{*} \in A$ of actions with the property that for every player $i \in N$ we have $$(a^{*}_{-i}, a^{*}_{i}) \succsim_i \text{ for all } a_i \in A_i$$
+Thus for $a^*$ to be a Nash equilibrium it must be that no player $i$ has an action yielding an outcome that he prefers to that generated when he chooses $a_i^*$ , given that every other player $j$ chooses his equilibrium action $a^*_j$. Briefly, no player can profitably deviate, given the actions of the other players. \cite{CourseInGameTheory}
 
-\paragraph{Computational challenge}
-The hardest challenge is not finding a Nash equilibrium, but formulating an efficient algorithm. This notorious problem is described by Papdimitriou as 'the most fundamental computational problem whose complexity is wide open'\cite{daskalakis2009complexity}. Although in many strategic interactions (games) the answer is negative, in some games Nash Equilibrium can be compute directly or approximated with the use of an heuristic method\cite{MicrogridModellingPetrosAristidou,AumannGameTheoryAccomplish} 
+\paragraph{Computational challenge} \fix{\@JW, wat is precies je bedoeling met deze alinea?}
+The hardest challenge is not finding a Nash equilibrium \fb{why?}, but formulating an efficient algorithm. This notorious problem is described by Papdimitriou as 'the most fundamental computational problem whose complexity is wide open'\cite{daskalakis2009complexity}. \fb{PPAP compleet probleem} Although in many strategic interactions (games) the answer is negative \fb{what is the question?}, in some games Nash Equilibrium can be compute directly or approximated with the use of an heuristic method\cite{MicrogridModellingPetrosAristidou,AumannGameTheoryAccomplish} 
 
 \paragraph{Dominant strategy} 
-A dominant strategy is in a way the opposite of an equilibrium, an agent can always make the same choice, with the highest payoff for itself, regardless of the choices that other agents make. 
+The action of every player in a dominant strategy equilibrium is a best response to every collection of action for the other players, not just the equilibrium actions of the other players as in a Nash equilibrium \cite{CourseInGameTheory}. So the dominant strategy is optimal regardless of the choices of the other players.
 
 \paragraph{Cooperative vs Noncooperative game theory} 
 We divide game theory into two main branches: noncooperative game theory and cooperative game theory. Noncooperative game theory is used in the strategic decision-making processes of a number of entities that are independent in their decision making, and have a partially or totally conflicting interest over the outcome of a decision process that is affected by their actions\cite{keypaper}. In cooperative game theory, it is possible to model binding agreements between entities and strategies can be shared. 
