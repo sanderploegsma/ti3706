@@ -1,7 +1,7 @@
-\section{Game Theory}
-As seen in the previous chapters technical challenges arise with the introduction of smart grids. Game theory, in combination with \gls{mas}, plays a significant role in the development of smart grids. Game theory concepts provide us with a language to formulate, structure, analyse and understand strategic scenarios.
+\section{Game theoretic tools for the development of smartgrids}
+As seen in the previous chapters technical challenges arise with the introduction of smart grids. Game theory, in combination with \gls{mas}, plays a significant role in the development of smart grids \cite{keypaper}. Game theory concepts provide us with a language to formulate, structure, analyse and understand strategic scenarios.
 
-\subsection{Formal Definition}
+\subsection{What is game theory?}
 We can define game theoretic games within the smart grid as finite n-unit normal form games with parameters: $\langle A,Action,C,g,\mu \rangle$ \cite{CourseInGameTheory}. \\
 \begin{itemize}
     \item $A = \{1 ... n\}$ is a set of agents.
@@ -27,11 +27,11 @@ We divide game theory into two main branches: noncooperative game theory and coo
 
 It is important to note that noncooperative doesn't always imply that the players are not competing, any cooperation that arises must be self-enforcing with no communication or coordination of strategic choices among the players.\cite{keypaper}
 
-\subsubsection{Prisoner's Dilemma}
+\paragraph{Prisoner's Dilemma}
 One of the most famous examples that illustrates a situation that can be modelled by game theory is the Prisoner's Dilemma. This is an example which was formalised by Poundstone \cite{poundstone} and goes as follows: 
 
 Two suspects of a crime are arrested and imprisoned separately. If they both confess, each will be convicted to go to jail for 2 years. If only 1 suspect confesses, he wil be used as a witness against the other suspect. The witness wil be set free, the other suspect wil go to jail for 3 years. If they both remain silent, both of them will only serve 1 year in prison.\\
-This game can be formalized using $\langle A,Action,C,g,\mu \rangle$ as:
+This game can be formalised using $\langle A,Action,C,g,\mu \rangle$ as:
 
 \begin{itemize}
     \item $A = \{S_{1}, S_{2} \}$ the suspects are the players.
@@ -58,9 +58,9 @@ This game can be formalized using $\langle A,Action,C,g,\mu \rangle$ as:
 \label{prisoners-d}
 \end{table}
 
-In table \ref{prisoners-d} you see all options for the prisoner's dilemma modeled in an easier to read table format. If the prisoners want the total number of years in prison to be as low as possible, they should both be silent. Interesting however is that each player has an incentive to confess. No matter what is choses by one player, the other player benefits to confess. This is why the Nash equilibrium for this game is (Confess, Confess).    
+In Table \ref{prisoners-d} you see all options for the prisoner's dilemma modelled in an easier to read table format. If the prisoners want the total number of years in prison to be as low as possible, they should both be silent. Interesting however is that each player has an incentive to confess. With the given prisoners dilemma example we have to following situation: No matter what is chosen by one player, the other player benefits to confess. This is why the Nash equilibrium for this game is (Confess, Confess). This is a good example of a dominant strategy. 
 
-\subsection{Examples of commonly used game theory concepts}
+\subsection{Examples of commonly used game theoretical concepts}
 In this subsection we will discuss some game theory concepts used in the following chapters. \improve{Extend explanation why we chose these problems}
 
 \paragraph{Auctions}
@@ -85,7 +85,7 @@ In a Stackelberg game there is a player who takes on the role of the \textit{lea
 
 
 \subsection{Game Theory applied to Smart Grids}
-When researching game theoretic approaches to manage and run smart grids, one will find out that a distinction can be made for different kind of subproblems arising in smart grids research \cite{keypaper}. In this paper the focus lies on the use of microgrids and the demand side management. First the microgrids are discussed, which can help tackle complex challenges and solve efficiency issues. Secondly the \gls{dsm} is discussed. \gls{dsm} will help in locating and solving issues involving the end user. 
+When researching game theoretic approaches to manage and run smart grids, one will find out that a distinction can be made for different kind of subproblems arising in smart grids research \cite{keypaper}. In this paper the focus is on the use of microgrids and the demand side management. First the microgrids are summarised. Secondly the \gls{dsm} is summarised. \gls{dsm} will help in locating and solving issues involving the end user. 
 
 \todo{Discuss that we're going to look at DSM and microgrids, and why we've chosen these topics over other topics}
 
