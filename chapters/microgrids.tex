@@ -1,22 +1,22 @@
 \section{Microgrids}
-As stated previously, using microgrids can reduce the amount of components in the larger smart grid. Current electrical grids actually already do this: neighbourhood homes are connected to a central distribution point, which connects to the main grid.
+As stated previously, using microgrids can reduce the amount of components the 'macro' smart grid has to control directly. Current electrical grids actually already do this: neighbourhood homes are connected to a central distribution point, which connects to the main grid.
 
 These microgrids make use of so called \glspl{vpp}, which will be addressed before the use of game theoretic techniques when dealing with microgrids is discussed.
 
 \subsection{\acrlongpl{vpp}}
 When researching \glspl{vpp} and their use in microgrids, no definitive definition can be found for a \gls{vpp}. A nice view is given by Mashhour et al. \cite{MashhourMoghaddas-Tafreshi2011} and Nikonowicz et al. \cite{NikonowiczMilewski2012}. Some definitions could even been seen as a simple version of a microgrid, aggregating and controlling a whole neighbourhood \cite{Kumagai2012} and thus making the difference between a microgrid and a \gls{vpp} only a thin line. For the convenience of the use of \glspl{vpp} in microgrids, we stick to the following definition:
 
-A \gls{vpp} is a control center or an aggregation of (different kinds) energy sources, such as renewable and nonrenewable generators, and will appear onto the market as if it is only one power plant. It keeps track of its energy sources' supplies and determines the price. Communication for its energy sources is directed to the \gls{vpp}, which determines its price according to its supply and the demand. \glspl{vpp} can be very efficient, as they can combine different energy sources to generate a continuous supply. In other words, resources with different weaknesses and strengths are combined in a complementary way \cite{Koeppel2003}. For example, when a wind turbine and solar cells are combined, the \gls{vpp} is less subject to changing weather conditions \cite{Tromly2001, Kumagai2012, MashhourMoghaddas-Tafreshi2011, NikonowiczMilewski2012}.
+A \gls{vpp} is a control center or an aggregation of (different kinds) energy sources, such as renewable and nonrenewable generators, and will appear onto the market as if it is only one power plant. It keeps track of its energy sources' supplies and determines the price. Communication for its energy sources is directed to the \gls{vpp}, which determines its price according to its supply and the demand. \glspl{vpp} can be very efficient, as they can combine different energy sources to generate a continuous supply. In other words, resources with different weaknesses and strengths are combined in a complementary way \cite{Koeppel2003}. For example, when a wind turbine and solar cells are combined, the \gls{vpp} is less subject to changing weather conditions \cite{Tromly2001, Kumagai2012, MashhourMoghaddas-Tafreshi2011, NikonowiczMilewski2012}. 
 
-\glspl{vpp} are widely used in microgrids, as they make pricing of electricity for a combination of (closely located) energy sources pretty convenient. \todo{elaborate why VPPs are used commonly in microgrids}
+\glspl{vpp} are widely used in microgrids, as they make pricing of electricity for a combination of (closely located) energy sources pretty convenient. \todo{elaborate why VPPs are used commonly in microgrids} \improve{What is the difference between VPPs and microgrids according to our deffinition?}
 
 \subsection{Efficiency for microgrids}
 \todo{Write paragraph about efficiency for microgrids.}
 
-Useful paper for this paragraph\cite{MicrogridModellingPetrosAristidou}.
+Useful paper for this paragraph\cite{MicrogridModellingPetrosAristidou,HatziargyriouAsanoIravaniMarnay2007}.
 
 \subsection{Game of perfect information}
-When using microgrids, the game of perfect information can be used to create an equilibrium in microgrids. Because the number of players is limited in a microgrid, both for the demand side as well as the supply side, it is less complex and time consuming to calculate the best options considering each players' wishes. Then, a price can be determined by a Aggregator, who can decide whether to buy or sell electricity for the whole microgrid \cite{MicrogridModellingPetrosAristidou}.
+When using microgrids, the game of perfect information can be used to create an equilibrium in microgrids. Because the number of players is limited in a microgrid, both for the demand side as well as the supply side, it is less complex and time consuming to calculate the best options considering each players' wishes. Then, a price can be determined by a Aggregator, who can decide whether to buy or sell electricity for the whole microgrid \improve{Is an aggregator a person?} \cite{MicrogridModellingPetrosAristidou}.
 
 \subsection{Localised and virtual microgrids}
 Energy loss reduction is one of the advantages when using microgrids in a smart way. The loss of energy is caused mainly by two factors \cite{EnergyLossURL}: 
