@@ -4,7 +4,7 @@
 \usepackage{hyperref}
 \usepackage{xcolor}
 \usepackage{geometry}
-\usepackage[acronym]{glossaries}
+\usepackage{acronym}
 \usepackage{titlesec}
 \usepackage{cite}
 \usepackage{amssymb}
@@ -45,9 +45,6 @@ total={180mm,230mm}
 \newcommand{\fix}[1]{{\color{fix}\textbf{FIX: } #1}}
 \newcommand{\fb}[1]{{\color{feedback}\textbf{FEEDBACK:} #1}}
 
-% Generate the glossary
-\makeglossaries
-
 % --------------------------------------------
 % Begin of document
 % --------------------------------------------
@@ -56,15 +53,16 @@ total={180mm,230mm}
 \maketitle
 
 % --------------------------------------------
-% Glossary definitions
+% Acronym definitions
 % --------------------------------------------
-%\newglossaryentry{dms}{name=DMS, description={Demand Side Management}}
-\newacronym{dsm}{DSM}{Demand Side Management}
-\newacronym{ev}{EV}{Electronic Vehicle}
-\newacronym{vpp}{VPP}{Virtual Power Plant}
-\newacronym{mas}{MAS}{Multi Agent Systems}
-\newacronym{der}{DER}{Distributed Energy Resource}
-
+\begin{acronym}
+	\acro{dsm}[DSM]{Demand Side Management}
+	\acro{ev}[EV]{Electronic Vehicle}
+	\acro{vpp}[VPP]{Virtual Power Plant}
+	\acro{mas}[MAS]{Multi Agent Systems}
+	\acro{der}[DER]{Distributed Energy Resource}
+	\acro{agv}[AGV]{Arrow-d'Aspremont-Gerard-Varet}
+\end{acronym}
 
 \tableofcontents
 
