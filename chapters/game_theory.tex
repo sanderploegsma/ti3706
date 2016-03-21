@@ -1,28 +1,31 @@
-\section{Game theoretic tools for the development of smartgrids}
-As seen in the previous chapters technical challenges arise with the introduction of smart grids. Game theory, in combination with \gls{mas}, plays a significant role in the development of smart grids \cite{keypaper}. Game theory concepts provide us with a language to formulate, structure, analyse and understand strategic scenarios.
+\section{Game theoretic tools for the development of smart grids}
+As seen in the previous chapters technical challenges arise with the introduction of smart grids. Game theory, in combination with \ac{mas}, plays a significant role in the development of smart grids \cite{keypaper}. Game theory concepts provide us with a language to formulate, structure, analyse and understand strategic scenarios.
 
 \subsection{What is game theory?}
-We can define game theoretic games within the smart grid as finite n-unit normal form games with parameters: $\langle A,Action,C,g,\mu \rangle$ \cite{CourseInGameTheory}. \\
-\begin{itemize}
-    \item $A = \{1 ... n\}$ is a set of agents.
-    \item $Action = \{A_{1} ... A_{i} ... A_{n}$\}, where $A_{i}$ is the set of actions a given agent $i$ can choose from.
-    \item $C$ is the set of consequences.
-    \item $g: Action \to C$ is the mapping of actions to consequences
-    \item $\mu = \langle \mu_{1}, ..., \mu_{i}, ..., \mu_{n}, \rangle $ where $\mu_{i}$ is a payoff function for agent $i$.
-\end{itemize}
 
+Game theory is the study of mathematical models of conflict and cooperation between intelligent rational decision makers \cite{myerson2013game}. 
+We can define game theoretic games as following
+\begin{itemize}
+    \item a finite set $N$ (the set of players)
+    \item for each player $i \in N$ a nonempty set $Ai$ (the set of actions available to player $i$)
+    \item for each player $i \in N$ a preference relation $\succsim_i$ on $A = \times_{j \in N}A_j$ (the preference relation of player $i$).
+\end{itemize}
+If the set $A_i$ of actions of every player $i$ is finite then the game is $finite$
+
+The requirement that the preferences of each player $i$ be defined over A, rather than $A_{i}$, is the feature that distinguishes a strategic game from a decision problem: each player may care not only about his own action but also about the actions taken by the other players  \cite{CourseInGameTheory}.
 
 \paragraph{Nash equilibrium} 
-The most commonly used solution concept in game theory is that of Nash equilibrium \cite{CourseInGameTheory}. In this concept, each agent is assumed to know the equilibrium strategies of the other agents. The equilibrium is reached when each player isn't helped by changing it's own state, with the assumption that all other players don't change their state. 
-This can be formalized as $\forall i: s^{*}_{i}$ is the best choice for agent $i$, maximuzing it's payoff, assuming al other agents choose solution $s^{*}_{x}$, for $x : \{1...n\}$. 
+The most commonly used solution concept in game theory is that of Nash equilibrium. This notion captures a steady state of the play of a strategic game in which each player holds the correct expectation about the other players’ behaviour and acts rationally. It does not attempt to examine the process by which a steady state is reached.
+The definition of a Nash equilibrium of a strategic game $\langle N, (A_i), (\succsim_i) \rangle $ is a profile $a^{*} \in A$ of actions with the property that for every player $i \in N$ we have $(a^{*}_{-i}, a^{*}_{i}) \succsim_i \mbox{ for all } a_i \in A_i$
+Thus for $a^*$ to be a Nash equilibrium it must be that no player $i$ has an action yielding an outcome that he prefers to that generated when he chooses $a_i^*$ , given that every other player $j$ chooses his equilibrium action $a^*_j$. Briefly, no player can profitably deviate, given the actions of the other players \cite{CourseInGameTheory}.
 
-\paragraph{Computational challenge}
-The hardest challenge is not finding a Nash equilibrium, but formulating an efficient algorithm. This notorious problem is described by Papdimitriou as 'the most fundamental computational problem whose complexity is wide open'\cite{daskalakis2009complexity}. Although in many strategic interactions (games) the answer is negative, in some games Nash Equilibrium can be compute directly or approximated with the use of an heuristic method\cite{MicrogridModellingPetrosAristidou,AumannGameTheoryAccomplish} 
+\paragraph{Computational challenge} \fix{\@JW, wat is precies je bedoeling met deze alinea?}
+The hardest challenge is not finding a Nash equilibrium \fb{why?}, but formulating an efficient algorithm. This notorious problem is described by Papdimitriou as 'the most fundamental computational problem whose complexity is wide open'\cite{daskalakis2009complexity}. \fb{PPAP compleet probleem} Although in many strategic interactions (games) the answer is negative \fb{what is the question?}, in some games Nash Equilibrium can be compute directly or approximated with the use of an heuristic method\cite{MicrogridModellingPetrosAristidou,AumannGameTheoryAccomplish} 
 
 \paragraph{Dominant strategy} 
-A dominant strategy is in a way the opposite of an equilibrium, an agent can always make the same choice, with the highest payoff for itself, regardless of the choices that other agents make. 
+The action of every player in a dominant strategy equilibrium is a best response to every collection of action for the other players, not just the equilibrium actions of the other players as in a Nash equilibrium \cite{CourseInGameTheory}. So the dominant strategy is optimal regardless of the choices of the other players.
 
-\paragraph{Cooperative vs Noncooperative game theory} 
+\paragraph{Cooperative vs. Noncooperative game theory} 
 We divide game theory into two main branches: noncooperative game theory and cooperative game theory. Noncooperative game theory is used in the strategic decision-making processes of a number of entities that are independent in their decision making, and have a partially or totally conflicting interest over the outcome of a decision process that is affected by their actions\cite{keypaper}. In cooperative game theory, it is possible to model binding agreements between entities and strategies can be shared. 
 
 It is important to note that noncooperative doesn't always imply that the players are not competing, any cooperation that arises must be self-enforcing with no communication or coordination of strategic choices among the players.\cite{keypaper}
@@ -30,9 +33,10 @@ It is important to note that noncooperative doesn't always imply that the player
 \paragraph{Prisoner's Dilemma}
 One of the most famous examples that illustrates a situation that can be modelled by game theory is the Prisoner's Dilemma. This is an example which was formalised by Poundstone \cite{poundstone} and goes as follows: 
 
-Two suspects of a crime are arrested and imprisoned separately. If they both confess, each will be convicted to go to jail for 2 years. If only 1 suspect confesses, he wil be used as a witness against the other suspect. The witness wil be set free, the other suspect wil go to jail for 3 years. If they both remain silent, both of them will only serve 1 year in prison.\\
-This game can be formalised using $\langle A,Action,C,g,\mu \rangle$ as:
+Two suspects of a crime are arrested and imprisoned separately. If they both confess, each will be convicted to go to jail for 2 years. If only 1 suspect confesses, he wil be used as a witness against the other suspect. The witness wil be set free, the other suspect wil go to jail for 3 years. If they both remain silent, both of them will only serve 1 year in prison.
 
+This game can be formalised using $\langle A,Action,C,g,\mu \rangle$ as:
+\todo{Change this section now that the formal definition has changed.}
 \begin{itemize}
     \item $A = \{S_{1}, S_{2} \}$ the suspects are the players.
     \item $Action_{1} = Action_{2} = \{S, C\}$ Silent or Confess.
@@ -71,11 +75,11 @@ Almost all games are based on stochastic models. A stochastic game is a dynamic 
 Bayesian games are a noncooperative game in game theory where the information about the strategies and objective function of the other players is incomplete. These games are hard to model and not a lot of research has yet been done on possible usage in smart grids. Given the large nature of the smart grid, the amount of players involved, it is quite possible that players in any game model might face technical difficulties in estimating the strategies or objectives of the other players \cite{keypaper}. With this in mind, bayesian games can overcome a lot of these difficulties. 
 
 \paragraph{Game of perfect information}
-Games of perfect information or extensive games of perfect information deal with the type of games that have a sequential structure and assuming that every player having knowledge about the previous actions of other players \cite{CourseInGameTheory}.
+Games of perfect information or extensive games of perfect information deal with the type of games that have a sequential structure, and assuming that each player has knowledge about the previous actions of other players \cite{CourseInGameTheory}.
 
 \paragraph{Stackelberg games}
 A Stackelberg game is a game of perfect information. \cite{CourseInGameTheory}.
-In a Stackelberg game there is a player who takes on the role of the \textit{leader} and another player who is the \textit{follower}. The leader will then try to enforce its strategy onto the follower \cite{ShohamLeyton-Brown2008}. The follower is informed of the action chosen by the leader and will then proceed to choose its own action.
+In a Stackelberg game there is a player who takes on the role of the \textit{leader} and another player who is the \textit{follower}. The leader will then try to enforce its strategy onto the follower \cite{ShohamLeyton-Brown2008}. The follower is informed of the action chosen by the leader and will then proceed to choose its own action. \improve{Outline difference with Bayesian games more strongly?}
 
 %\paragraph{Potluck problems}
 
@@ -87,12 +91,16 @@ consistent with some solution concept \cite{CourseInGameTheory}. In game theory 
 \todo{Write paragraph about VCG + AVG}
 
 \subsection{Game Theory applied to Smart Grids}
-When researching game theoretic approaches to manage and run smart grids, one will find out that a distinction can be made for different kind of subproblems arising in smart grids research \cite{keypaper}. In this paper the focus is on the use of microgrids and the demand side management. First the microgrids are summarised. Secondly the \gls{dsm} is summarised. \gls{dsm} will help in locating and solving issues involving the end user. 
+When researching game theoretic approaches to manage and run smart grids, one will find out that a distinction can be made for different kind of subproblems arising in smart grids research \cite{keypaper}. In this paper the focus is on the use of microgrids and the demand side management. First microgrids are summarised. Secondly the \ac{dsm} is summarised. \ac{dsm} will help in locating and solving issues involving the end user. 
 
-\todo{Discuss that we're going to look at DSM and microgrids, and why we've chosen these topics over other topics}
+\paragraph{Microgrids}
+\paragraph{Demand Side Management}
+
+\todo{Explain why we have chosen these subjects over other}
 
 \subsubsection{Expected shortcomings}
 \todo{Extend this subsection}
+\improve{Move this to the conclusion? Seems out of place to me here.}
 
 Issues expected when using Game Theory using the following terms:
 \begin{itemize}

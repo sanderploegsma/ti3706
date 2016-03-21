@@ -4,11 +4,12 @@
 \usepackage{hyperref}
 \usepackage{xcolor}
 \usepackage{geometry}
-\usepackage[acronym]{glossaries}
+\usepackage[printonlyused]{acronym}
 \usepackage{titlesec}
 \usepackage{cite}
+\usepackage{amssymb}
 
-\title{\todo{Paper title}}
+\title{A survey on game theoretic approaches for the design of smart grids}
 \author{\begin{tabular}{lr}
 Daan Schipper & 4155270 \\ 
 Jan-Willem Manenschijn & 4148509\\ 
@@ -17,7 +18,7 @@ Owen Huang & 4317459 \\
 Ruben Starmans & 4141792 \\ 
 Sander Ploegsma & 4167155\\ 
 Thomas Overklift & 4080890
-\end{tabular} \\\\ Supervised by Priv.-Doz. Dr. Nils Bulling}
+\end{tabular} \\\\ Supervised by Dr. Nils Bulling}
 
 \geometry{
 a4paper,
@@ -44,9 +45,6 @@ total={180mm,230mm}
 \newcommand{\fix}[1]{{\color{fix}\textbf{FIX: } #1}}
 \newcommand{\fb}[1]{{\color{feedback}\textbf{FEEDBACK:} #1}}
 
-% Generate the glossary
-\makeglossaries
-
 % --------------------------------------------
 % Begin of document
 % --------------------------------------------
@@ -55,15 +53,14 @@ total={180mm,230mm}
 \maketitle
 
 % --------------------------------------------
-% Glossary definitions
+% Acronym definitions
 % --------------------------------------------
-%\newglossaryentry{dms}{name=DMS, description={Demand Side Management}}
-\newacronym{dsm}{DSM}{Demand Side Management}
-\newacronym{ev}{EV}{Electronic Vehicle}
-\newacronym{vpp}{VPP}{Virtual Power Plant}
-\newacronym{mas}{MAS}{Multi Agent Systems}
-\newacronym{der}{DER}{Distributed Energy Resource}
-
+\acrodef{dsm}[DSM]{Demand Side Management}
+\acrodef{ev}[EV]{Electronic Vehicle}
+\acrodef{vpp}[VPP]{Virtual Power Plant}
+\acrodef{mas}[MAS]{Multi Agent Systems}
+\acrodef{der}[DER]{Distributed Energy Resource}
+\acrodef{agv}[AGV]{Arrow-d'Aspremont-Gerard-Varet}
 
 \tableofcontents
 
@@ -72,12 +69,12 @@ total={180mm,230mm}
 % --------------------------------------------
 
 %\let\clearpage\relax
-\include{chapters/introduction}
-\include{chapters/smart_grid}
-\include{chapters/game_theory}
-\include{chapters/microgrids}
-\include{chapters/demand_side_management}
-%\include{chapters/conclusion}
+\input{chapters/abstract}
+\input{chapters/introduction}
+\input{chapters/game_theory}
+\input{chapters/microgrids}
+\input{chapters/demand_side_management}
+\input{chapters/conclusion}
 
 % --------------------------------------------
 % REFERENCES
