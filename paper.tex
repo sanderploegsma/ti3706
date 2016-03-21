@@ -4,7 +4,7 @@
 \usepackage{hyperref}
 \usepackage{xcolor}
 \usepackage{geometry}
-\usepackage{acronym}
+\usepackage[printonlyused]{acronym}
 \usepackage{titlesec}
 \usepackage{cite}
 \usepackage{amssymb}
@@ -55,14 +55,12 @@ total={180mm,230mm}
 % --------------------------------------------
 % Acronym definitions
 % --------------------------------------------
-\begin{acronym}
-	\acro{dsm}[DSM]{Demand Side Management}
-	\acro{ev}[EV]{Electronic Vehicle}
-	\acro{vpp}[VPP]{Virtual Power Plant}
-	\acro{mas}[MAS]{Multi Agent Systems}
-	\acro{der}[DER]{Distributed Energy Resource}
-	\acro{agv}[AGV]{Arrow-d'Aspremont-Gerard-Varet}
-\end{acronym}
+\acrodef{dsm}[DSM]{Demand Side Management}
+\acrodef{ev}[EV]{Electronic Vehicle}
+\acrodef{vpp}[VPP]{Virtual Power Plant}
+\acrodef{mas}[MAS]{Multi Agent Systems}
+\acrodef{der}[DER]{Distributed Energy Resource}
+\acrodef{agv}[AGV]{Arrow-d'Aspremont-Gerard-Varet}
 
 \tableofcontents
 
