@@ -7,7 +7,7 @@ Game theory is the study of mathematical models of conflict and cooperation betw
 We can define game theoretic games as following
 \begin{itemize}
     \item a finite set $N$ (the set of players)
-    \item for each player $i \in N$ a nonempty set $Ai$ (the set of actions available to player $i$)
+    \item for each player $i \in N$ a nonempty set $A_i$ (the set of actions available to player $i$)
     \item for each player $i \in N$ a preference relation $\succsim_i$ on $A = \times_{j \in N}A_j$ (the preference relation of player $i$).
 \end{itemize}
 If the set $A_i$ of actions of every player $i$ is finite then the game is $finite$
@@ -35,11 +35,13 @@ One of the most famous examples that illustrates a situation that can be modelle
 
 Two suspects of a crime are arrested and imprisoned separately. If they both confess, each will be convicted to go to jail for 2 years. If only 1 suspect confesses, he wil be used as a witness against the other suspect. The witness wil be set free, the other suspect wil go to jail for 3 years. If they both remain silent, both of them will only serve 1 year in prison.
 
-This game can be formalised using $\langle A,Action,C,g,\mu \rangle$ as:
-\todo{Change this section now that the formal definition has changed.}
+This game can be formalised by $\langle N, (A_i), (u_i) \rangle$as:
 \begin{itemize}
-    \item $A = \{S_{1}, S_{2} \}$ the suspects are the players.
-    \item $Action_{1} = Action_{2} = \{S, C\}$ Silent or Confess.
+	\item $N = \{i_{1}, i_{2} \}$ the suspects are the players.
+    \item $A_1 = A_2 = \{Silent, Confess\}$
+
+	\item \todo{Change this section now that the formal definition has changed.}
+
     \item $C = \{c_{1},c_{2},c_{3},c_{4}\}$, both serve 1 year, both serve 2 years, or one goes free and the other serves 3 years.
     \item $g((S,S)) = c_{1}$, \\
     $g((C,C)) = c_{2}$, \\
