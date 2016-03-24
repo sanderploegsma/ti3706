@@ -5,11 +5,17 @@
 %4.3 Stored energy management
 %--- Vervolgens aantal subsub sections
 
-As stated previously, using microgrids can reduce the amount of components the 'macro' smart grid has to control directly. Current electrical grids actually already do this: neighbourhood homes are connected to a central distribution point, which connects to the main grid.
 
-These microgrids make use of so called \acp{vpp}, which will be addressed before the use of game theoretic techniques when dealing with microgrids is discussed.
+
+As stated previously, using microgrids can reduce the amount of components the 'macro' smart grid has to control directly. Current electrical grids actually already do this: neighbourhood homes are connected to a central distribution point, which connects to the main grid.
+Microgrids can solve, or optimize, challenges in smart-grids which are too large to tackle or too complex to solve.\cite{MicrogridModellingPetrosAristidou}. The concept of Microgrids can also help with the Stored energy management.
+These microgrids make use of so called \acp{vpp}, which will be addressed before we explain how the use of game theoretic techniques deals with the mentioned challenges.
+
+\todo{Short paragraph about the different kind of microgrids}
+
 
 \subsection{\aclp{vpp}}
+\todo{Determine the location(in this paper) of information about VPP's}
 The literature offers many definitions of a \ac{vpp}. For example, a nice view is given by Mashhour et al. \cite{MashhourMoghaddas-Tafreshi2011} and Nikonowicz et al. \cite{NikonowiczMilewski2012}. \todo{add views from these papers} For the convenience of the use of \acp{vpp} in microgrids, we stick to the following definition:
 
 A \ac{vpp} is a control center or an aggregation of (different kinds) energy sources, such as renewable and nonrenewable energy sources, and will appear onto the market as if it is only one power plant. It keeps track of its energy sources' supplies and determines the price. Communication for its energy sources is directed to the \ac{vpp}, which determines its price according to its supply and the demand. \acp{vpp} can be very efficient, as they can combine different energy sources to generate a continuous supply. In other words, resources with different weaknesses and strengths are combined in a complementary way \cite{Koeppel2003}. For example, when a wind turbine and solar cells are combined, the \ac{vpp} is less subject to changing weather conditions \cite{Tromly2001, Kumagai2012, MashhourMoghaddas-Tafreshi2011, NikonowiczMilewski2012}. 
@@ -18,15 +24,16 @@ So, \acp{vpp} are widely used in microgrids to manage the supply and pricing of 
 
 \todo{Game theory using \cite{ChalkiadakisRobuKotaEtAl2011}}
 
-\subsection{Efficiency for microgrids}
-\todo{Write paragraph about efficiency for microgrids.}
+\subsection{Complexity}
+Microgrids are subsets of smart-grids. Because they are smaller, other game theories can be applied, such as a dynamic game of perfect information. \todo{More examples of Game Theories dealing with complexity/microgrids}
 
-Useful paper for this paragraph\cite{MicrogridModellingPetrosAristidou,HatziargyriouAsanoIravaniMarnay2007}.
+\paragraph{Game of perfect information}
+When using microgrids, the game of perfect information can be used to create an equilibrium in microgrids. Because the number of players is limited in a microgrid, both for the demand side as well as the supply side, it is less complex and time consuming to calculate the best options considering each players' wishes. Then, a price can be determined by a Aggregator, who can decide whether to buy or sell electricity for the whole microgrid. The aggregator is modelled as a Smart Agent. \cite{MicrogridModellingPetrosAristidou}.
 
-\subsection{Game of perfect information}
-When using microgrids, the game of perfect information can be used to create an equilibrium in microgrids. Because the number of players is limited in a microgrid, both for the demand side as well as the supply side, it is less complex and time consuming to calculate the best options considering each players' wishes. Then, a price can be determined by a Aggregator, who can decide whether to buy or sell electricity for the whole microgrid \improve{Is an aggregator a person?} \cite{MicrogridModellingPetrosAristidou}.
 
-\subsection{Localised and virtual microgrids}
+\subsection{Stored energy management}
+\todo{Talk about energy management in general, how microgrids can improve and something about the physical distance}
+\subsubsection{energy loss}
 Energy loss reduction is one of the advantages when using microgrids in a smart way. The loss of energy is caused mainly by two factors \cite{EnergyLossURL}: 
 
 \begin{enumerate}
@@ -36,8 +43,6 @@ Energy loss reduction is one of the advantages when using microgrids in a smart 
 
 Microgrids will be able to reduce energy loss because within microgrids generated power can be used for local demand and can communicate with other nearby microgrids. It can also help to avoid the power losses found in a substation's transformer \cite{keypaper}.
 
-\subsection{Stored energy management}
-\todo{Transport efficiency}
 \subsubsection{\ac{ev} groups}
 The growing usage of \ac{ev}s offers a lot of possibilities for microgrids because it expands the storage capacity of a microgrid tremendously. One of the key challenges in integrating \ac{ev}s in a smart grid is modelling the interactions of all actors. In \cite{SaadHanPoorEtAl2011} a noncooperative game is formulated between \ac{ev} groups where groups strategically choose how much of their energy surplus is sold. A double auction based mechanism is given to determine the energy price of the energy trade market, to assure a strategy-proof outcome. 
 
@@ -45,9 +50,6 @@ The growing usage of \ac{ev}s offers a lot of possibilities for microgrids becau
 
 % Goede papers:
 %	http://ieeexplore.ieee.org/stamp/stamp.jsp?arnumber=5546904
-\todo{Add a subsection with about microgrid source.}
-
-\subsection{Cooperation strategies}
-\todo{Add paragraphs about autonomous mode (island) VS cooperative VS local cooperative mode }
-
+% ,HatziargyriouAsanoIravaniMarnay2007
+% MicrogridModellingPetrosAristidou
 
