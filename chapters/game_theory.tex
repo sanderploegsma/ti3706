@@ -19,10 +19,10 @@ The most commonly used solution concept in game theory is that of Nash equilibri
 The definition of a Nash equilibrium of a strategic game $\langle N, (A_i), (\succsim_i) \rangle $ is a profile $a^{*} \in A$ of actions with the property that for every player $i \in N$ we have $(a^{*}_{-i}, a^{*}_{i}) \succsim_i \mbox{ for all } a_i \in A_i$
 Thus for $a^*$ to be a Nash equilibrium it must be that no player $i$ has an action yielding an outcome that he prefers to that generated when he chooses $a_i^*$ , given that every other player $j$ chooses his equilibrium action $a^*_j$. Briefly, no player can profitably deviate, given the actions of the other players \cite{CourseInGameTheory}.
 
-\iffalse
-\paragraph{Computational challenge} \fix{\@JW, wat is precies je bedoeling met deze alinea?}
-The hardest challenge is not finding a Nash equilibrium \fb{why?}, but formulating an efficient algorithm. This notorious problem is described by Papdimitriou as 'the most fundamental computational problem whose complexity is wide open'\cite{daskalakis2009complexity}. \fb{PPAP compleet probleem} Although in many strategic interactions (games) the answer is negative \fb{what is the question?}, in some games Nash Equilibrium can be compute directly or approximated with the use of an heuristic method\cite{MicrogridModellingPetrosAristidou,AumannGameTheoryAccomplish} 
-\fi
+
+\paragraph{Computational challenge} 
+It was not until recent, that researchers proved computing a Nash Equilibrium is complete for the complexity class PPAD\cite{daskalakis2009complexity}. This means that deciding if a \ac{neq} exists is a trivial question, as the answer of all PPAD problems is always yes, a solution always exists. Finding this solution though, cannot be NP-complete, as NP is a class of decision problems. But Daskalakis et al. informaly suggests finding a Nash problem is "as close to NP-complete as it could possibly be". \cite{daskalakis2009complexity, Aaronson2012}. 
+As the computations being made by the smart agents will probably be done on low budget hardware, \ac{neq} need to be computed approximated with the use of Heuristics. \cite{MicrogridModellingPetrosAristidou,AumannGameTheoryAccomplish} 
 
 \paragraph{Dominant strategy} 
 The action of every player in a dominant strategy equilibrium is a best response to every collection of action for the other players, not just the equilibrium actions of the other players as in a Nash equilibrium \cite{CourseInGameTheory}. So the dominant strategy is optimal regardless of the choices of the other players.
@@ -86,3 +86,6 @@ Games of perfect information or extensive games of perfect information deal with
 \paragraph{Stackelberg games}
 A Stackelberg game is a game of perfect information. \cite{CourseInGameTheory}.
 In a Stackelberg game there is a player who takes on the role of the \textit{leader} and another player who is the \textit{follower}. The leader will then try to enforce its strategy onto the follower \cite{ShohamLeyton-Brown2008}. The follower is informed of the action chosen by the leader and will then proceed to choose its own action.
+
+\paragraph{Congestion games}
+A congestion game is a special case of a potential game \cite{IbarsNavarroGiupponi2010, MondererShapley1996, ShohamLeyton-Brown2008} in which players choose actions based on the the amount of other players picking some resource. This means that the payoff of each player is determined by the frequency of a resource being picked. As a result, there is an anonymity property present. This property states that players have no interest in exactly who selects the resource, only how many \cite{ShohamLeyton-Brown2008}.
