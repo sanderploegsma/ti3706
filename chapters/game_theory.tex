@@ -19,8 +19,10 @@ The most commonly used solution concept in game theory is that of Nash equilibri
 The definition of a Nash equilibrium of a strategic game $\langle N, (A_i), (\succsim_i) \rangle $ is a profile $a^{*} \in A$ of actions with the property that for every player $i \in N$ we have $(a^{*}_{-i}, a^{*}_{i}) \succsim_i \mbox{ for all } a_i \in A_i$
 Thus for $a^*$ to be a Nash equilibrium it must be that no player $i$ has an action yielding an outcome that he prefers to that generated when he chooses $a_i^*$ , given that every other player $j$ chooses his equilibrium action $a^*_j$. Briefly, no player can profitably deviate, given the actions of the other players \cite{CourseInGameTheory}.
 
+\iffalse
 \paragraph{Computational challenge} \fix{\@JW, wat is precies je bedoeling met deze alinea?}
 The hardest challenge is not finding a Nash equilibrium \fb{why?}, but formulating an efficient algorithm. This notorious problem is described by Papdimitriou as 'the most fundamental computational problem whose complexity is wide open'\cite{daskalakis2009complexity}. \fb{PPAP compleet probleem} Although in many strategic interactions (games) the answer is negative \fb{what is the question?}, in some games Nash Equilibrium can be compute directly or approximated with the use of an heuristic method\cite{MicrogridModellingPetrosAristidou,AumannGameTheoryAccomplish} 
+\fi
 
 \paragraph{Dominant strategy} 
 The action of every player in a dominant strategy equilibrium is a best response to every collection of action for the other players, not just the equilibrium actions of the other players as in a Nash equilibrium \cite{CourseInGameTheory}. So the dominant strategy is optimal regardless of the choices of the other players.
@@ -60,7 +62,7 @@ This game can be formalised by $\langle N, (A_i), (u_i) \rangle$as:
 In Table \ref{prisoners-d} you see all options for the prisoner's dilemma modelled in an easier to read table format. If the prisoners want the total number of years in prison to be as low as possible, they should both be silent. Interesting however is that each player has an incentive to confess. With the given prisoners dilemma example we have to following situation: No matter what is chosen by one player, the other player benefits to confess. This is why the Nash equilibrium for this game is (Confess, Confess). This is a good example of a dominant strategy. 
 
 \subsection{Examples of commonly used game theoretical concepts}
-In this subsection we will discuss some game theory concepts used in the following chapters. \improve{Extend explanation why we chose these problems}
+In this subsection we will briefly discuss some game theory concepts used in the following chapters. 
 
 \paragraph{Mechanism design}
 The standard game theory procedure is to formulate a model that
@@ -83,25 +85,4 @@ Games of perfect information or extensive games of perfect information deal with
 
 \paragraph{Stackelberg games}
 A Stackelberg game is a game of perfect information. \cite{CourseInGameTheory}.
-In a Stackelberg game there is a player who takes on the role of the \textit{leader} and another player who is the \textit{follower}. The leader will then try to enforce its strategy onto the follower \cite{ShohamLeyton-Brown2008}. The follower is informed of the action chosen by the leader and will then proceed to choose its own action. \improve{Outline difference with Bayesian games more strongly?}
-
-%\paragraph{Potluck problems}
-
-\subsection{Game Theory applied to Smart Grids}
-When researching game theoretic approaches to manage and run smart grids, one will find out that a distinction can be made for different kind of subproblems arising in smart grids research \cite{keypaper}. In this paper the focus is on the use of microgrids and the demand side management. First microgrids are summarised. Secondly the \ac{dsm} is summarised. \ac{dsm} will help in locating and solving issues involving the end user. 
-
-\paragraph{Microgrids}
-\paragraph{Demand Side Management}
-
-\todo{Explain why we have chosen these subjects over other}
-
-\subsubsection{Expected shortcomings}
-\todo{Extend this subsection}
-\improve{Move this to the conclusion? Seems out of place to me here.}
-
-Issues expected when using Game Theory using the following terms:
-\begin{itemize}
-	\item Scalability (is the game applicable on a large scale or only in a small local market?)
-	\item Interoperability (how does the game do in multiple contexts, f.e. in context of DER?)
-	\item Realism (is the representation of the game realistic in a real world application?)
-\end{itemize}
+In a Stackelberg game there is a player who takes on the role of the \textit{leader} and another player who is the \textit{follower}. The leader will then try to enforce its strategy onto the follower \cite{ShohamLeyton-Brown2008}. The follower is informed of the action chosen by the leader and will then proceed to choose its own action.
