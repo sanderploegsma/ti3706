@@ -3,7 +3,7 @@ As seen in the previous chapters technical challenges arise with the introductio
 
 \subsection{What is game theory?}
 
-Game theory is the study of mathematical models of conflict and cooperation between intelligent rational decision makers \cite{myerson2013game}. 
+Game theory is the study of mathematical models of conflict and cooperation between intelligent rational decision makers \cite{myerson2013game}.
 We can define game theoretic games as following
 \begin{itemize}
     \item a finite set $N$ (the set of players)
@@ -56,7 +56,7 @@ This game can be formalised by $\langle N, (A_i), (u_i) \rangle$as:
 \begin{table}[h]
 \centering
 \begin{tabular}{ccc}
-                             & silent                   & confes                   \\ \cline{2-3} 
+                             & silent                   & confess                   \\ \cline{2-3} 
 \multicolumn{1}{c|}{silent}  & \multicolumn{1}{c|}{1,1} & \multicolumn{1}{c|}{0,3} \\ \cline{2-3} 
 \multicolumn{1}{c|}{confess} & \multicolumn{1}{c|}{3,0} & \multicolumn{1}{c|}{2,2} \\ \cline{2-3} 
 \end{tabular}
@@ -69,8 +69,16 @@ In Table \ref{prisoners-d} you see all options for the prisoner's dilemma modell
 \subsection{Examples of commonly used game theoretical concepts}
 In this subsection we will discuss some game theory concepts used in the following chapters. \improve{Extend explanation why we chose these problems}
 
+\paragraph{Mechanism design}
+The standard game theory procedure is to formulate a model that
+captures a situation and to investigate the set of outcomes that are
+consistent with some solution concept \cite{CourseInGameTheory}. In game theory however, this isn't always sufficient because the number of players is high and the supply and demand is constantly changing. This is where mechanism design comes in. In mechanism design, or reversed game theory, we do exactly the opposite as in the standard game theory procedure. We first define the goal we want to achieve, and then analyse what procedures can be designed to achieve those goals \cite{SalfatiRabinovici2014}. 
+ 
+\fix{\@ Owen: Can't find anything about AVG. Average game? Is it necessary to add it to this section?}
+
 \paragraph{Auctions}
-Auctions are often used in games to decide for what price power should be bought or sold. First-price auctions are auctions where bidders submit bids, and the highest bidder wins and pays the winning bid. Second-price auctions are auctions where also the highest bidder wins, but where the bidder pays a price equal to the second highest bid. Second-price bids are for example used in \cite{SaadHanPoorEtAl2011} because this type of auction is strategy proof, i.e., it gives the involved entities an incentive to truthfully reveal their bids.
+Auctions are often used in games to decide for what price power should be bought or sold. First-price auctions are auctions where bidders submit bids, and the highest bidder wins and pays the winning bid. Second-price auctions are auctions where also the highest bidder wins, but where the bidder pays a price equal to the second highest bid. Second-price bids are for example used in \cite{SaadHanPoorEtAl2011} because this type of auction is strategy proof, i.e., it gives the involved entities an incentive to truthfully reveal their bids. The second-price auctions are also called Vickrey auctions or VCG-auctions, named after the author of the paper that introduced this this concept \cite{Vickrey1961}.
+
 \paragraph{Stochastic games}
 Almost all games are based on stochastic models. A stochastic game is a dynamic play that proceeds from position to position \cite{Shapley1953} and can be played by one or more players. Quite a few papers have been written with stochastic games in the smart grid \cite{LiangZhuang2014} because they are good to characterize the randomness in renewable power generation.  
 \paragraph{Bayesian games}
@@ -84,13 +92,6 @@ A Stackelberg game is a game of perfect information. \cite{CourseInGameTheory}.
 In a Stackelberg game there is a player who takes on the role of the \textit{leader} and another player who is the \textit{follower}. The leader will then try to enforce its strategy onto the follower \cite{ShohamLeyton-Brown2008}. The follower is informed of the action chosen by the leader and will then proceed to choose its own action. \improve{Outline difference with Bayesian games more strongly?}
 
 %\paragraph{Potluck problems}
-
-\paragraph{Mechanism design}
-The standard game theory procedure is to formulate a model that
-captures a situation and to investigate the set of outcomes that are
-consistent with some solution concept \cite{CourseInGameTheory}. In game theory however, this isn't always sufficient because the number of players is high and the supply and demand is constantly changing. This is where mechanism design comes in. In mechanism design, or reversed game theory, we do exactly the opposite as in the standard game theory procedure. We first define the goal we want to achieve, and then analyse what procedures can be designed to achieve those goals \cite{SalfatiRabinovici2014}. 
-
-\todo{Write paragraph about VCG + AVG}
 
 \subsection{Game Theory applied to Smart Grids}
 When researching game theoretic approaches to manage and run smart grids, one will find out that a distinction can be made for different kind of subproblems arising in smart grids research \cite{keypaper}. In this paper the focus is on the use of microgrids and the demand side management. First microgrids are summarised. Secondly the \ac{dsm} is summarised. \ac{dsm} will help in locating and solving issues involving the end user. 
