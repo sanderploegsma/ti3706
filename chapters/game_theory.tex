@@ -19,8 +19,10 @@ The most commonly used solution concept in game theory is that of Nash equilibri
 The definition of a Nash equilibrium of a strategic game $\langle N, (A_i), (\succsim_i) \rangle $ is a profile $a^{*} \in A$ of actions with the property that for every player $i \in N$ we have $(a^{*}_{-i}, a^{*}_{i}) \succsim_i \mbox{ for all } a_i \in A_i$
 Thus for $a^*$ to be a Nash equilibrium it must be that no player $i$ has an action yielding an outcome that he prefers to that generated when he chooses $a_i^*$ , given that every other player $j$ chooses his equilibrium action $a^*_j$. Briefly, no player can profitably deviate, given the actions of the other players \cite{CourseInGameTheory}.
 
+\iffalse
 \paragraph{Computational challenge} \fix{\@JW, wat is precies je bedoeling met deze alinea?}
 The hardest challenge is not finding a Nash equilibrium \fb{why?}, but formulating an efficient algorithm. This notorious problem is described by Papdimitriou as 'the most fundamental computational problem whose complexity is wide open'\cite{daskalakis2009complexity}. \fb{PPAP compleet probleem} Although in many strategic interactions (games) the answer is negative \fb{what is the question?}, in some games Nash Equilibrium can be compute directly or approximated with the use of an heuristic method\cite{MicrogridModellingPetrosAristidou,AumannGameTheoryAccomplish} 
+\fi
 
 \paragraph{Dominant strategy} 
 The action of every player in a dominant strategy equilibrium is a best response to every collection of action for the other players, not just the equilibrium actions of the other players as in a Nash equilibrium \cite{CourseInGameTheory}. So the dominant strategy is optimal regardless of the choices of the other players.
@@ -60,7 +62,7 @@ This game can be formalised by $\langle N, (A_i), (u_i) \rangle$as:
 In Table \ref{prisoners-d} you see all options for the prisoner's dilemma modelled in an easier to read table format. If the prisoners want the total number of years in prison to be as low as possible, they should both be silent. Interesting however is that each player has an incentive to confess. With the given prisoners dilemma example we have to following situation: No matter what is chosen by one player, the other player benefits to confess. This is why the Nash equilibrium for this game is (Confess, Confess). This is a good example of a dominant strategy. 
 
 \subsection{Examples of commonly used game theoretical concepts}
-In this subsection we will discuss some game theory concepts used in the following chapters. \improve{Extend explanation why we chose these problems}
+In this subsection we will briefly discuss some game theory concepts used in the following chapters. 
 
 \paragraph{Auctions}
 Auctions are often used in games to decide for what price power should be bought or sold. First-price auctions are auctions where bidders submit bids, and the highest bidder wins and pays the winning bid. Second-price auctions are auctions where also the highest bidder wins, but where the bidder pays a price equal to the second highest bid. Second-price bids are for example used in \cite{SaadHanPoorEtAl2011} because this type of auction is strategy proof, i.e., it gives the involved entities an incentive to truthfully reveal their bids.
