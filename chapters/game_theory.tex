@@ -8,7 +8,7 @@ We can define game theoretic games as following
 \begin{itemize}
     \item a finite set $N$ (the set of players)
     \item for each player $i \in N$ a nonempty set $A_i$ (the set of actions available to player $i$)
-    \item for each player $i \in N$ a preference relation $\succsim_i$ on $A = \times_{j \in N}A_j$ (the preference relation of player $i$).
+    \item for each player $i \in N$ a payoff function $u_i: A \rightarrow \mathbb{R}$
 \end{itemize}
 If the set $A_i$ of actions of every player $i$ is finite then the game is $finite$
 
@@ -38,19 +38,12 @@ Two suspects of a crime are arrested and imprisoned separately. If they both con
 This game can be formalised by $\langle N, (A_i), (u_i) \rangle$as:
 \begin{itemize}
 	\item $N = \{i_{1}, i_{2} \}$ the suspects are the players.
-    \item $A_1 = A_2 = \{Silent, Confess\}$
+    \item $A_1 = A_2 = \{S, C\}$, silent and confess.
+    \item $u_1(S, S) = u_2(S, S) = 1$, \\
+    $u_1(C, C) = u_2(C, C) = 2$, \\
+    $u_1(S, C) = u_2(C, S) = 3$, \\
+    $u_1(C, S) = u_2(S, C) = 0$.
 
-	\item \todo{Change this section now that the formal definition has changed.}
-
-    \item $C = \{c_{1},c_{2},c_{3},c_{4}\}$, both serve 1 year, both serve 2 years, or one goes free and the other serves 3 years.
-    \item $g((S,S)) = c_{1}$, \\
-    $g((C,C)) = c_{2}$, \\
-    $g((S,C)) = c_{3}$, \\
-    $g((C,S)) = c_{4}$.
-    \item $\mu S_{1}(c_{1}) = \mu S_{2}(c_{1}) = 1$, \\
-    $\mu S_{1}(c_{2}) = \mu S_{2}(c_{2}) = 2$, \\
-    $\mu S_{1}(c_{3}) = \mu S_{2}(c_{4}) = 0$, \\
-    $\mu S_{1}(c_{4}) = \mu S_{2}(c_{3}) = 3$.
 \end{itemize}
 
 \begin{table}[h]
