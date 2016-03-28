@@ -1,20 +1,24 @@
 \section{Conclusion}
 
-In this paper we're trying to answer the question: "What are the current challenges in the design of smart grids when utilising game theoretic approaches?" In order to give a well formed answer to this question we've looked at some problems that might occur the when using smart grids, and how game theoretic methods can help solving them. When we look at challenges using smart grids several key issues pop-up. We'll address these issues now. 
+In this paper we are addressing the question: "What are the current challenges in the design of smart grids when utilising game theoretic approaches?" In order to give a well formed answer to this question we have looked at some problems that might occur the when using smart grids, and how game theoretic methods can help solving them. When we look at challenges using smart grids several key issues pop-up. We'll address these issues now. 
 
 \paragraph{Managing supply and Demand}
 The most important task of the smart grid is evidently supplying al of it's users with sufficient energy. This is not straightforward because energy demand cannot always be met by energy production. Additionally the amount of energy that can be produced by renewable energy sources varies from time to time due to weather circumstances for instances, and the amount of energy that is requested by users fluctuates during the day. \\
 There are several game theoretic approaches that can be used to resolve this problem. There are several games that target user demands and aim to spread energy demand equally over the day. \\
 Energy demand can be managed with adjustments to the energy tariff. Real-Time Pricing (RTP) is a method based on the Vickrey-Clarke-Groves (VCG) mechanism that obliges users to predict their own energy consumption and penalizing them for (grave) inaccuracy in their prediction. This way users are encouraged to report their estimated energy consumption truthfully and accurately. When this VCG mechanism is applied to RTP a Stackelberg game can be modelled. The load on the energy grid can be spread out with changes to the energy tariff. \\
-\todo{energy consumption scheduling}\\
-\todo{EV's}
-\\
+When all prosumers install smart meters in their homes, the meter will negotiate when energy will be used, and how much. This way the program of for instance a washing machine can be scheduled to run at a beneficial time. \\ 
+When Electronical Vehicles (EVs) are incorporated into a home, the smart meter, and by extend the smart grid, can decide to use energy from the battery of an EV in order to save expenses when tariffs are high, or even to sell at a good price to other users that need energy. The EV can then later be charged again when the tariffs are lower. \\
 \todo{prediction - estimating power}
 
 \paragraph{Complexity} 
-\improve{Maybe something about complexity? $->$ heuristics, benaderingsalgoritmes etc? NP-Hard, EXP or P?}\\
-\todo{DERs - microgrids}\\
+The smart grid has a lot of Distributed Energy Resources (DERs), consumers and prosumers connected to it. This can be a challenge when trying to solve computational challenges, such as predicting energy consumption patterns or trying to reach an equilibrium with RTP. When there are too many users the problem will be too complex, and cannot be solved quickly or accurately enough. \\
+Microgrids are a potential solution to the complexity of the computations. A number of DERs and users are grouped into a smaller microgrid, and this way the macro smart grid can be divided into any number of smaller microgrids. The grids can then optimize their own energy distribution locally, with less participants. Because of the smaller number of players in a game theoretic scenario, the model can be more precise. Because of this a game of perfect information can be played.
+A microgrid can operate within the macro grid as a single actor. This way it can supply or demand energy to or from the rest of the smart grid if needed.\\
 \todo{VVPs}\\
+Another simplification mechanic is the Virtual Power Plant (VPP). VVPs are designed too group DERs specifically and form a single (virtual) power plant. A VPP can keep track of all it's energy supply and the demand, and determine a single tariff this way. An additional benefit of grouping a lot of DERs is improved reliability. Decreased energy generation by a single renewable energy source (such as wind turbines) has less impact if multiple sources are grouped.
+\improve{Maybe something about complexity? $->$ heuristics, benaderingsalgoritmes etc? NP-Hard, EXP or P?}\\
+
+
 
 \paragraph{Privacy \& Security}
 Another key challenge is keeping the smart grid secure, it's has to be resistant to hackers and DDos attacks for instance. The privacy of prosumers needs to be ensured as well, as smart meters process a lot of personal data. These requirements can't easily be covered using game theory. But good security and privacy management are key requirements when designing and deploying a smart grid. 
@@ -32,10 +36,11 @@ Another key challenge is keeping the smart grid secure, it's has to be resistant
 
 
 %We have seen that most solutions solve the supply vs demand peaks in the smart grid using game theory all comes down to one thing: Communication. Communication between all players, being a citizen using electricity to power their households\todo{cites}, companies using electricity to power their businesses or even changing their core business to selling electricity \cite{Binczewski2002,Kumagai2012}, but also citizens generating power by having sun-powered roofs, citizens playing on the energy market using their EV's to buy, store and sell power to make profit and even buying storage capacity to trade in energy \todo{search the correct citation}.
-
+\todo{Our own opinion!}
 We've also seen that the current technology is just by far not explored enough, while we see a lot of solutions, we also see a lot of challenges, thus possibilities, still open for research. \todo{Summarise the possibilities}
 
 But, even if the research \fix{find the right word for "technologie/onderzoek/status"} isn't good enough to create these smart grids, we can already improve the current electricity grid, making it smarter even when using one-way communications. \cite{AgarwalCui2012}
+
 
 \paragraph{Subquestions}
 \begin{itemize}
