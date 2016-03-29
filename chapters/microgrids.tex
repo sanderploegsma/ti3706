@@ -20,26 +20,26 @@ The literature offers many definitions of a \ac{vpp}. For example, a nice view i
 
 A \ac{vpp} is a control center or an aggregation of (different kinds) energy sources, such as renewable and nonrenewable energy sources, and will appear onto the market as if it is only one power plant. It keeps track of its energy sources' supplies and determines the price. Communication for its energy sources is directed to the \ac{vpp}, which determines its price according to its supply and the demand. \acp{vpp} can be very efficient, as they can combine different energy sources to generate a continuous supply. In other words, resources with different weaknesses and strengths are combined in a complementary way \cite{Koeppel2003}. For example, when a wind turbine and solar cells are combined, the \ac{vpp} is less subject to changing weather conditions \cite{Tromly2001, Kumagai2012, MashhourMoghaddas-Tafreshi2011, NikonowiczMilewski2012}. 
 
-So, \acp{vpp} are widely used in microgrids to manage the supply and pricing of energy within a grid, conveniently combining (closely located) energy sources. The control of such a \ac{vpp} may vary in different circumstances \cite{NikonowiczMilewski2012}:
+So, \acp{vpp} are widely used in microgrids to manage the supply and pricing of energy within a grid, conveniently combining (closely located) energy sources. Such \acp{vpp} may use one of these approaches \cite{NikonowiczMilewski2012}:
 \begin{itemize}
 	\item Centralised control, where a single \ac{vpp} is responsible for the logic and management of \acp{der}, pricing and supply.
 	\item Distributed control, where one or more local \acp{vpp} control a limited number of \acp{der} while delegating certain decisions upwards to a higher level \ac{vpp}.
 	\item Fully distributed control, where each \ac{der} acts as an independent and intelligent agent.
 \end{itemize}
 
-\subsubsection{Cooperation}
+\paragraph{Cooperation}
 To coordinate pricing in a fully distributed \ac{vpp}, some form of agent cooperation is needed. To achieve this, mechanism design and cooperative game theory can be combined to derive a pricing mechanism, and ways to allocate revenues across agents and manage \ac{vpp} membership\cite{ChalkiadakisRobuKotaEtAl2011}. 
 
-A reward system is introduced that encourages individual \ac{der} agents to provide the \ac{vpp} with accurate estimates, improving its reliability in reference to microgrid or smart grid. 
+To make sure a \ac{vpp} is reliable, it should be able to predict a certain level of energy supply to a microgrid or smart grid. A reward system may be introduced that encourages individual \ac{der} agents to provide the \ac{vpp} with accurate estimates, thus enabling it to make concrete predictions.
 
-To make sure that the \ac{vpp} remains stable, a payoff scheme may be used that is based on a coalitional stability concept called \emph{the core} \cite{Myerson1991}. By forming a coalitional game with a subset of \acp{der} and using an allocation of the maximum payoff received when the agents cooperate, a stable \ac{vpp} can be guaranteed if that allocation in no way gives members an incentive to break the coalition.
+To make sure that the \ac{vpp} remains stable, a payoff scheme may be used that is based on a coalitional stability concept called \emph{the core} \cite{Myerson1991}. By forming a coalitional game with a subset of \acp{der} and using an allocation of the maximum payoff received when the agents cooperate, a stable \ac{vpp} can be guaranteed if that allocation in no way gives members an incentive to break the coalition \cite{ChalkiadakisRobuKotaEtAl2011, YeungPoonWu1999}.
 \todo{GT is not really my area of expertise, someone should check this}
 
 \subsection{Complexity}
 Microgrids are subsets of smart-grids. Because they are smaller, other game theories can be applied, such as a dynamic game of perfect information. \todo{More examples of Game Theories dealing with complexity/microgrids}
 
 \paragraph{Game of perfect information}
-When using microgrids, the game of perfect information can be used to create an equilibrium in microgrids. Because the number of players is limited in a microgrid, both for the demand side as well as the supply side, it is less complex and time consuming to calculate the best options considering each players' wishes. Then, a price can be determined by a Aggregator, who can decide whether to buy or sell electricity for the whole microgrid. The aggregator is modelled as a Smart Agent. \cite{MicrogridModellingPetrosAristidou}.
+When using microgrids, the game of perfect information can be used to create an equilibrium in microgrids. Because the number of players is limited in a microgrid, both for the demand side as well as the supply side, it is less complex and time consuming to calculate the best options considering each players' wishes. Then, a price can be determined by a Aggregator, who can decide whether to buy or sell electricity for the whole microgrid. The aggregator is modelled as a Smart Agent\cite{MicrogridModellingPetrosAristidou}.
 
 
 \subsection{Stored energy management}
