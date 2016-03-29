@@ -27,12 +27,13 @@ So, \acp{vpp} are widely used in microgrids to manage the supply and pricing of 
 	\item Fully distributed control, where each \ac{der} acts as an independent and intelligent agent.
 \end{itemize}
 
-\paragraph{Cooperation}
+\subsection{Cooperation}
+\label{microgrids:cooperation}
 To coordinate pricing in a fully distributed \ac{vpp}, some form of agent cooperation is needed. To achieve this, mechanism design and cooperative game theory can be combined to derive a pricing mechanism, and ways to allocate revenues across agents and manage \ac{vpp} membership\cite{ChalkiadakisRobuKotaEtAl2011}. 
 
 To make sure a \ac{vpp} is reliable, it should be able to predict a certain level of energy supply to a microgrid or smart grid. A reward system may be introduced that encourages individual \ac{der} agents to provide the \ac{vpp} with accurate estimates, thus enabling it to make concrete predictions.
 
-To make sure that the \ac{vpp} remains stable, a payoff scheme may be used that is based on a coalitional stability concept called \emph{the core} \cite{Myerson1991}. By forming a coalitional game with a subset of \acp{der} and using an allocation of the maximum payoff received when the agents cooperate, a stable \ac{vpp} can be guaranteed if that allocation in no way gives members an incentive to break the coalition \cite{ChalkiadakisRobuKotaEtAl2011, YeungPoonWu1999}.
+To make sure that the \ac{vpp} remains stable, a payoff scheme may be used that is based on a coalitional stability concept called \emph{the core} \cite{Myerson1991}. By forming a coalitional game with a subset of \acp{der} and using an allocation of the maximum payoff received when the agents cooperate, a stable \ac{vpp} can be guaranteed if that allocation in no way gives members an incentive to break the coalition \cite{ChalkiadakisRobuKotaEtAl2011, YeungPoonWu1999, SaadHanPoor2011}.
 \todo{GT is not really my area of expertise, someone should check this}
 
 \subsection{Complexity}
@@ -42,7 +43,7 @@ Microgrids are subsets of smart-grids. Because they are smaller, other game theo
 When using microgrids, the game of perfect information can be used to create an equilibrium in microgrids. Because the number of players is limited in a microgrid, both for the demand side as well as the supply side, it is less complex and time consuming to calculate the best options considering each players' wishes. Then, a price can be determined by a Aggregator, who can decide whether to buy or sell electricity for the whole microgrid. The aggregator is modelled as a Smart Agent\cite{MicrogridModellingPetrosAristidou}.
 
 
-\subsection{Stored energy management}
+\subsection{Energy management}
 \todo{Talk about energy management in general, how microgrids can improve and something about the physical distance}
 As you have read before, microgrids can help in reducing energy loss. The loss of energy is caused mainly by two factors \cite{EnergyLossURL}: 
 
@@ -52,6 +53,10 @@ As you have read before, microgrids can help in reducing energy loss. The loss o
 \end{enumerate}
 
 Microgrids will be able to reduce energy loss because within microgrids generated power can be used for local demand and can communicate with other nearby microgrids. It can also help to avoid the power losses found in a substation's transformer \cite{keypaper}.
+
+Whenever some microgrids have an excess of power while others have a need for power, it might be beneficial for these microgrids (and their consumers) to exchange energy among each other instead of requesting it from the main grid \cite{SaadHanPoorEtAl2011}. To manage this, the same cooperative game theory concepts as discussed in \ref{microgrids:cooperation} can be used. When the power loss of a trade is mapped to the value of the corresponding coalition, that power loss can be minimised, contributing to the efficiency of the entire smart grid. 
+
+The buying and selling of energy between microgrids can be guided by another cooperative game theory using auctions, as proposed in \cite{SaadHanPoorEtAl2011}. This involves matching several buyers and sellers within one or more coalition and agreeing on some price. This price $p$ can be obtained through the use of a \emph{double auction}, where all sellers asking $p$ or less and all buyers offering $p$ or more are matched and trade using $p$ \cite{gjerstad1998price}.
 
 \subsubsection{\ac{ev} groups}
 The growing usage of \ac{ev}s offers a lot of possibilities for microgrids because it expands the storage capacity of a microgrid tremendously. One of the key challenges in integrating \ac{ev}s in a smart grid is modelling the interactions of all actors. In \cite{SaadHanPoorEtAl2011} a noncooperative game is formulated between \ac{ev} groups where groups strategically choose how much of their energy surplus is sold. A double auction based mechanism is given to determine the energy price of the energy trade market, to assure a strategy-proof outcome. 
