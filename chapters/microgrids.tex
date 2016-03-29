@@ -8,7 +8,7 @@
 
 
 As stated previously, using microgrids can reduce the amount of components the 'macro' smart grid has to control directly. Current electrical grids actually already do this: neighbourhood homes are connected to a central distribution point, which connects to the main grid.
-Microgrids can solve, or optimize, challenges in smart-grids which are too large to tackle or too complex to solve.\cite{MicrogridModellingPetrosAristidou}. The concept of Microgrids can also help with the Stored energy management.
+Microgrids can solve, or optimise, challenges in smart-grids which are too large to tackle or too complex to solve\cite{MicrogridModellingPetrosAristidou}. The concept of Microgrids can also help with the Stored energy management.
 These microgrids make use of so called \acp{vpp}, which will be addressed before we explain how the use of game theoretic techniques deals with the mentioned challenges.
 
 \todo{Short paragraph about the different kind of microgrids}
@@ -16,13 +16,24 @@ These microgrids make use of so called \acp{vpp}, which will be addressed before
 
 \subsection{\aclp{vpp}}
 \todo{Determine the location(in this paper) of information about VPP's}
-The literature offers many definitions of a \ac{vpp}. For example, a nice view is given by Mashhour et al. \cite{MashhourMoghaddas-Tafreshi2011} and Nikonowicz et al. \cite{NikonowiczMilewski2012}. \todo{add views from these papers} For the convenience of the use of \acp{vpp} in microgrids, we stick to the following definition:
+The literature offers many definitions of a \ac{vpp}. For example, a nice view is given by Mashhour et al. \cite{MashhourMoghaddas-Tafreshi2011} and Nikonowicz et al. \cite{NikonowiczMilewski2012}, where the main concept illustrates a centralised control structure which connects, controls and visualises a work of distributed generators. For the convenience of the use of \acp{vpp} in microgrids, we stick to the following definition:
 
 A \ac{vpp} is a control center or an aggregation of (different kinds) energy sources, such as renewable and nonrenewable energy sources, and will appear onto the market as if it is only one power plant. It keeps track of its energy sources' supplies and determines the price. Communication for its energy sources is directed to the \ac{vpp}, which determines its price according to its supply and the demand. \acp{vpp} can be very efficient, as they can combine different energy sources to generate a continuous supply. In other words, resources with different weaknesses and strengths are combined in a complementary way \cite{Koeppel2003}. For example, when a wind turbine and solar cells are combined, the \ac{vpp} is less subject to changing weather conditions \cite{Tromly2001, Kumagai2012, MashhourMoghaddas-Tafreshi2011, NikonowiczMilewski2012}. 
 
-So, \acp{vpp} are widely used in microgrids to manage the supply and pricing of energy within a grid, conveniently combining (closely located) energy sources. \todo{elaborate why VPPs are used commonly in microgrids} 
+So, \acp{vpp} are widely used in microgrids to manage the supply and pricing of energy within a grid, conveniently combining (closely located) energy sources. The control of such a \ac{vpp} may vary in different circumstances \cite{NikonowiczMilewski2012}:
+\begin{itemize}
+	\item Centralised control, where a single \ac{vpp} is responsible for the logic and management of \acp{der}, pricing and supply.
+	\item Distributed control, where one or more local \acp{vpp} control a limited number of \acp{der} while delegating certain decisions upwards to a higher level \ac{vpp}.
+	\item Fully distributed control, where each \ac{der} acts as an independent and intelligent agent.
+\end{itemize}
 
-\todo{Game theory using \cite{ChalkiadakisRobuKotaEtAl2011}}
+\subsubsection{Cooperation}
+To coordinate pricing in a fully distributed \ac{vpp}, some form of agent cooperation is needed. To achieve this, mechanism design and cooperative game theory can be combined to derive a pricing mechanism, and ways to allocate revenues across agents and manage \ac{vpp} membership\cite{ChalkiadakisRobuKotaEtAl2011}. 
+
+A reward system is introduced that encourages individual \ac{der} agents to provide the \ac{vpp} with accurate estimates, improving its reliability in reference to microgrid or smart grid. 
+
+To make sure that the \ac{vpp} remains stable, a payoff scheme may be used that is based on a coalitional stability concept called \emph{the core} \cite{Myerson1991}. By forming a coalitional game with a subset of \acp{der} and using an allocation of the maximum payoff received when the agents cooperate, a stable \ac{vpp} can be guaranteed if that allocation in no way gives members an incentive to break the coalition.
+\todo{GT is not really my area of expertise, someone should check this}
 
 \subsection{Complexity}
 Microgrids are subsets of smart-grids. Because they are smaller, other game theories can be applied, such as a dynamic game of perfect information. \todo{More examples of Game Theories dealing with complexity/microgrids}
