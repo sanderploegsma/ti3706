@@ -65,12 +65,12 @@ It was not until recent, that researchers proved computing a Nash Equilibrium is
 As the computations being made by the smart agents will probably be done on low budget hardware, \ac{neq} need to be computed approximated with the use of Heuristics. \cite{MicrogridModellingPetrosAristidou,AumannGameTheoryAccomplish} 
 
 \subsection{Examples of commonly used game theoretical concepts}
-In this subsection we will briefly discuss some game theory concepts used in the following chapters. It is not aim of this survey to give a detailed explanation of each concepts, but a summarised over overview is given with citation to relevant literature.
+\todo{Low prio: als we tijd over hebben even kijken of de volgende concepts iets vloeiender in elkaar over kunnen lopen.}
+In this subsection we will briefly discuss some game theory concepts used in the following chapters. It is not aim of this survey to give a detailed explanation of each concept, but to give a summarised overview with citation to relevant literature.
 
-In contrast to to normal form games where players take a single action, extensive-form games allow to model sequential decision making. This allows for models where players can choose his strategy at any point of time. 
-%explanation of some games
+In contrast to normal form games where players take a single action, extensive-form games allow to model sequential decision making. This allows for models where players can choose their strategy at any point of time. \todo{/@Daan: ik snap deze zin niet helemaal.}
 
-A stochastic game is a dynamic play that proceeds from position to position \cite{Shapley1953} and can be played by one or more players. Quite a few papers have been written with stochastic games in the smart grid \cite{LiangZhuang2014} because they are good to characterize the randomness in renewable power generation.  
+A stochastic game is a dynamic play that proceeds from position to position \cite{Shapley1953} and can be played by one or more players. Quite a few papers have been written with stochastic games in the smart grid \cite{LiangZhuang2014} because they are good to characterise the randomness in renewable power generation.  
 
 Bayesian games are a non-cooperative game type where the information about the strategies and objective function of the other players is incomplete. Given the large nature of the smart grid, the amount of players involved, it is quite possible that players in any game model might face technical difficulties in estimating the strategies or objectives of the other players \cite{keypaper}. With this in mind, bayesian games can overcome a lot of these difficulties.
 
@@ -85,7 +85,7 @@ These extensive-form games are very useful in the making of game theory models f
 
 Auctions are often used in models to decide for what price power should be bought or sold. First-price auctions are auctions where bidders submit bids, and the highest bidder wins and pays the winning bid. Second-price auctions are auctions where also the highest bidder wins, but where the bidder pays a price equal to the second highest bid. Second-price bids are for example used in \cite{SaadHanPoorEtAl2011} because this type of auction is strategy proof, i.e., it gives the involved entities an incentive to truthfully reveal their bids. The second-price auctions are also called \ac{vcg} auctions or VCG-auctions, named after the author of the paper that introduced this this concept \cite{Vickrey1961}.
 
-An \ac{agv} mechanism is comparable to \ac{vcg}-auctions with main difference that VCG has the ex interim individual rationality property, and AGV has the ex ante individual rationality property\cite{ShohamLeyton-Brown2008}. This means that an agent in the VCG mechanism knows his own type but not the types of the other agents. An agent in an \ac{agv} mechanism knows nothing about anyone’s actual type. \todo{Explain difference focused on idividual rationality and budget balance.}
+An \ac{agv} mechanism is comparable to \ac{vcg}-auctions with as main difference that VCG has the ex interim individual rationality property, and AGV has the ex ante individual rationality property\cite{ShohamLeyton-Brown2008}. This means that an agent in the VCG mechanism knows his own type but not the types of the other agents. An agent in an \ac{agv} mechanism knows nothing about anyone’s actual type. \todo{Explain difference focused on idividual rationality and budget balance.}
 
 \subsection{Game theory in smart grids}
 \todo{referenties toevoegen en even laten nalezen door mensen die met volgende 2 hoofdstukken bezig waren}
