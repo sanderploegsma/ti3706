@@ -17,11 +17,11 @@ If the set $A_i$ of actions of every player $i$ is finite then the game is $fini
 The requirement that the preferences of each player $i$ be defined over $A$, rather than $A_{i}$, is the feature that distinguishes a strategic game from a decision problem: each player's decision is usually affected by the decisions of other players \cite{CourseInGameTheory}.
 
 \paragraph{Prisoner's Dilemma}
-One of the most famous examples that illustrates a situation that can be modelled by game theory is the Prisoner's Dilemma. This is an example which was formalised by Poundstone \cite{poundstone} and goes as follows: 
+One of the most famous examples that illustrates a situation that can be modelled by game theory is the Prisoner's Dilemma. This is an example which was formalised by Poundstone \cite{poundstone} and goes like this: 
 
-Two suspects of a crime are arrested and imprisoned separately. If they both confess, each will be convicted to go to jail for 2 years. If only 1 suspect confesses, he wil be used as a witness against the other suspect. The witness wil be set free, the other suspect wil go to jail for 3 years. If they both remain silent, both of them will only serve 1 year in prison. This game can be formalised by $\langle N, (A_i), (u_i) \rangle$as:
+Two suspects of a crime are arrested and imprisoned separately. If they both confess, each will be convicted and go to jail for 2 years. If only 1 suspect confesses, he will be used as a witness against the other suspect. The witness will be set free, the other suspect will go to jail for 3 years. If they both remain silent, both of them will only serve 1 year in prison. This game can be formalised by $\langle N, (A_i), (u_i) \rangle$ as:
 \begin{itemize}
-	\item $N = \{i_{1}, i_{2} \}$ the suspects are the players.
+	\item $N = \{a_{1}, a_{2} \}$, the suspects are the players.
     \item $A_1 = A_2 = \{S, C\}$, silent and confess.
     \item $u_1(S, S) = u_2(S, S) = 1$, \\
     $u_1(C, C) = u_2(C, C) = 2$, \\
@@ -44,7 +44,7 @@ Two suspects of a crime are arrested and imprisoned separately. If they both con
 In Table \ref{prisoners-d} you see all options for the prisoner's dilemma modelled in an easier to read payoff matrix. 
 If the prisoners want the total number of years in prison to be as low as possible, they should both be silent. Interesting however is that each player has an incentive to confess. 
 
-With the given prisoners dilemma example we have to following situation: No matter what is chosen by one player, the other player benefits to confess. This is called the best response: $a_i \in A_i $ is a best response to $ a_{-i} \in A_{-i} $ if $u_i(a_i, a_{-i}) \geq u_i(a_{i}', a_{-i}) \mbox{ for all } a_{i}' \in A_i$.
+With the given prisoners dilemma example we have the following situation: No matter what is chosen by one player, the other player benefits to confess. This is called the best response: $a_i \in A_i $ is a best response to $ a_{-i} \in A_{-i} $ if $u_i(a_i, a_{-i}) \geq u_i(a_{i}', a_{-i}) \mbox{ for all } a_{i}' \in A_i$.
 A Nash equilibrium for a strategic game is a profile of actions such
 that each action is a best response to the other actions. No player can profitably deviate, given the actions of the other players. Let $B_i(a_{-i}) \subset A_i$ be the set of player $i$'s best response actions against $a_i \in A_i$. Then the formal definition is
 $a^* = (a^*_1, \cdots, a^*_n) \in A \mbox{ is a Nash equilibrium if }
@@ -53,13 +53,13 @@ $a^* = (a^*_1, \cdots, a^*_n) \in A \mbox{ is a Nash equilibrium if }
 In game theory, dominant actions (sometimes referred to as dominant strategy) are defined as actions that are strictly better for a certain player, no matter what actions all the other players perform. So in the given example of the prisoners dilemma the dominant action would be to confess. Since both players have a strictly dominant strategy, the game has a unique Nash equilibrium (Confess, Confess). Games with dominant actions are usually easy, it is reasonable to assume that a dominant action is played. 
 
 \paragraph{Cooperative vs. Non-cooperative game theory} 
-Game theory can be divided into two main branches: non-cooperative game theory and cooperative game theory. Non-cooperative game theory is used in the strategic decision-making processes of a number of entities that are independent in their decision making, and have a partially or totally conflicting interest over the outcome of a decision process that is affected by their actions\cite{keypaper}. In cooperative game theory, it is possible to model binding agreements between entities and strategies can be shared. 
+Game theory can be divided into two main branches: non-cooperative game theory and cooperative game theory. Non-cooperative game theory is used in the strategic decision-making processes of a number of entities that are independent in their decision-making, and have a partially or totally conflicting interest over the outcome of a decision process that is affected by their actions\cite{keypaper}. In cooperative game theory, it is possible to model binding agreements between entities and strategies can be shared. 
 
 It is important to note that non-cooperative does not always imply that the players are not competing, any cooperation that arises must be self-enforcing with no communication or coordination of strategic choices among the players.
 
 \paragraph{Computational challenge} 
-It was not until recent, that researchers proved computing a Nash Equilibrium is complete for the complexity class PPAD\cite{daskalakis2009complexity}. This means that deciding if a \ac{neq} exists is a trivial question, as the answer of all PPAD problems is always yes, a solution always exists. Finding this solution though, cannot be NP-complete, as NP is a class of decision problems. But Daskalakis et al. informaly suggest finding a Nash problem is "as close to NP-complete as it could possibly be". \cite{daskalakis2009complexity, Aaronson2012}. 
-As the computations being made by the smart agents will probably be done on low budget hardware, \ac{neq} need to be computed approximated with the use of Heuristics. \cite{MicrogridModellingPetrosAristidou,AumannGameTheoryAccomplish} 
+It was not until recent, that researchers proved computing a Nash equilibrium is complete for the complexity class PPAD\cite{daskalakis2009complexity}. This means that deciding if a \ac{neq} exists is a trivial question, as the answer of all PPAD problems is always yes, a solution always exists. Finding this solution though, cannot be NP-complete, as NP is a class of decision problems. But Daskalakis et al. informaly suggest finding a Nash problem is "as close to NP-complete as it could possibly be". \cite{daskalakis2009complexity, Aaronson2012}. 
+As the computations being made by the smart agents will probably be done on low budget hardware, the \ac{neq} needs to be  approximated with the use of Heuristics. \cite{MicrogridModellingPetrosAristidou,AumannGameTheoryAccomplish} 
 
 \subsection{Examples of commonly used game theoretical concepts}
 \todo{Low prio: als we tijd over hebben even kijken of de volgende concepts iets vloeiender in elkaar over kunnen lopen.}
