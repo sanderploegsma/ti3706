@@ -1,4 +1,4 @@
-\newpage
+
 \section{Microgrids}\label{microgrids}
 %We hebben afgesproken dat we de boel even wat gaan omschoppen opdat het hoofdstuk zich meer zal richten op game theory. Voorstel: 
 %4.1 Grouping of DER
@@ -7,22 +7,54 @@
 %--- Vervolgens aantal subsub sections
 
 
+Another challenge in de design of Smart Grids is managing energy generation and storage. This challenge is impacted by geographical limitations, as energy loss has a big \todo{invloedhebber} impact when transferring energy.\cite{EnergyLossURL}
+Microgrids can solve this problem by managing all supply and demand within a geographical area. When introducing microgids, new challenges arise: In what way should microgrids communicate with eachother? but also creates the opportunity to utilize game theoretic methods to compute local nash equilibria, such as a Dynamic Game of Perfect information and a Double Auction Game.
+Microgrids can operate in both isolation(islanded mode) as in conjunction with the smart grid\ref{HatziargyriouAsanoIravaniMarnay2007}. 
+A example model of a neighbourhood microgrid can be seen in figure \ref{img:microgrid-model}
 
-As stated previously, using microgrids can reduce the amount of components the 'macro' smart grid has to control directly. Current electrical grids actually already do this: neighbourhood homes are connected to a central distribution point, which connects to the main grid.
-Microgrids can solve, or optimise, challenges in smart-grids which are too large to tackle or too complex to solve\cite{MicrogridModellingPetrosAristidou}. The concept of Microgrids can also help with the Stored energy management.
-These microgrids make use of so called \acp{vpp}, which will be addressed before we explain how the use of game theoretic techniques deals with the mentioned challenges.
 
-\todo{Short paragraph about the different kind of microgrids}
+%Other challenges in the design of Smart Grids are  the complexity of calculating equilibria and managing energy generation and storage. Constructing microgrids, in essence a geographical limited smart grid, gives us the opportunity to utelise Game Theoretic methods such as a Game of Perfect information and double auction game. 
+%Current electrical grids actually already do this: neighbourhood homes are connected to a central distribution point, which connects to the main grid.
+%Microgrids can solve, or optimise, challenges in smart-grids which are too large to tackle or too complex to solve. The concept of Microgrids can also help with the Stored energy management.
+
+
 
 \subsection{Complexity}
-Microgrids are subsets of smart-grids. Because they are smaller, other game theories can be applied, such as a dynamic game of perfect information. \todo{More examples of Game Theories dealing with complexity/microgrids}
+
+As discussed in chapter two, calculating nash equilibria is almost as hard as calculating NP-hard problems. When making algorithms approximating the nash equilibria, heuristics are definitely needed. Smart-grids have a lot of players and microgrids reduce this number drastically. Therefore, computing an approximation for nash equilibrium will cost relatively less computing power.
+
 
 \paragraph{Game of perfect information}
+When having a microgrid as modelled in figure \ref{img:microgrid-model}, we can use a Game Theoretic Approach called a "dynamic game of perfect information" to calculate a nash equilibriumAll local Controllers (Smart Agents in the homes and for each \acr{DER}
+
 When using microgrids, the game of perfect information can be used to create an equilibrium in microgrids. Because the number of players is limited in a microgrid, both for the demand side as well as the supply side, it is less complex and time consuming to calculate the best options considering each players' wishes. Then, a price can be determined by a Aggregator, who can decide whether to buy or sell electricity for the whole microgrid. The aggregator is modelled as a Smart Agent\cite{MicrogridModellingPetrosAristidou}.
 
+The Microgrid model can be examined under the class of games called ”Dynamic
+
+Games of Perfect Information”. Dynamic games are games with sequential move
+
+order, meaning, some players move or act only after having observed someone
+
+else’s move or action. Perfect Information denotes that at every round of the
+
+game, the player whose turn is to chose an action knows the actions other play-
+ers have chosen before him. The game formed by the Microgrid model can be
+
+of complete information, meaning that every players revenue function is com-
+mon knowledge, or incomplete information [6]. We can see the extensive form
+
+representation of the game in 2.
+
+\begin{figure}
+	\caption{Microgrid model}
+	\centering
+	\includegraphics[width=1\linewidth]{images/game-of-perfect-information.png}
+	\label{img:microgrid-model}
+\end{figure}
 
 \subsection{Energy management}
 \todo{Talk about energy management in general, how microgrids can improve and something about the physical distance}
+In microgrids heb je minder players 
 As you have read before, microgrids can help in reducing energy loss. The loss of energy is caused mainly by two factors \cite{EnergyLossURL}: 
 
 \begin{enumerate}
