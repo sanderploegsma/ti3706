@@ -1,7 +1,7 @@
 \section{Game theoretic tools for the development of smart grids} \label{gametheory}
 
 
-As seen in the previous chapters technical challenges arise with the introduction of smart grids. Game theory, in combination with methods from \ac{mas}, plays a significant role in the development of smart solutions for smart grids \cite{keypaper}. Game theory concepts provide us with a language to formulate, structure, analyse and understand strategic scenarios.
+Technical challenges arise with the introduction of smart grids. Game theory, in combination with methods from \ac{mas}, plays a significant role in the development of smart solutions for smart grids \cite{keypaper}. Game theory concepts provide us with a language to formulate, structure, analyse and understand strategic scenarios.
 
 \subsection{What is game theory?}
 Game theory is the study of mathematical models of conflict and cooperation between intelligent rational decision makers \cite{myerson2013game}.
@@ -45,6 +45,7 @@ In Table \ref{prisoners-d} you see all options for the prisoner's dilemma modell
 If the prisoners want the total number of years in prison to be as low as possible, they should both be silent. Interesting however is that each player has an incentive to confess. 
 
 With the given prisoners dilemma example we have the following situation: No matter what is chosen by one player, the other player benefits to confess. This is called the best response: $a_i \in A_i $ is a best response to $ a_{-i} \in A_{-i} $ if $u_i(a_i, a_{-i}) \geq u_i(a_{i}', a_{-i}) \mbox{ for all } a_{i}' \in A_i$.
+
 A Nash equilibrium for a strategic game is a profile of actions such
 that each action is a best response to the other actions. No player can profitably deviate, given the actions of the other players. Let $B_i(a_{-i}) \subset A_i$ be the set of player $i$'s best response actions against $a_i \in A_i$. Then the formal definition is
 $a^* = (a^*_1, \cdots, a^*_n) \in A \mbox{ is a Nash equilibrium if }
@@ -82,16 +83,14 @@ These extensive-form games are very useful in the making of game theory models f
 
 Auctions are often used in models to decide for what price power should be bought or sold. First-price auctions are auctions where bidders submit bids, and the highest bidder wins and pays the winning bid. Second-price auctions are auctions where also the highest bidder wins, but where the bidder pays a price equal to the second highest bid. Second-price bids are for example used in \cite{SaadHanPoorEtAl2011} because this type of auction is strategy proof, i.e., it gives the involved entities an incentive to truthfully reveal their bids. The second-price auctions are also called \ac{vcg} auctions or VCG-auctions, named after the author of the paper that introduced this concept \cite{Vickrey1961}.
 
-An \ac{agv} mechanism is comparable to \ac{vcg}-auctions with as main difference that \ac{vcg} has the ex interim individual rationality property, and \ac{avg} has the ex ante individual rationality property\cite{ShohamLeyton-Brown2008}. This means that an agent in the \ac{vcg} mechanism knows his own type but not the types of the other agents. An agent in an \ac{agv} mechanism knows nothing about anyone’s actual type. \todo{Explain difference focused on idividual rationality and budget balance.}
+An \ac{agv} mechanism is comparable to \ac{vcg}-auctions with as main difference that \ac{vcg} has the ex interim individual rationality property, and \ac{agv} has the ex ante individual rationality property \cite{ShohamLeyton-Brown2008}. This means that an agent in the \ac{vcg} mechanism knows his own type but not the types of the other agents. An agent in an \ac{agv} mechanism knows nothing about anyone’s actual type. \todo{Explain difference focused on idividual rationality and budget balance.}
+
+To promote player cooperation within a certain context, it is useful to apply a coalitional game, a cooperative game theory where a set of players form coalitions using a real-valued \emph{characteristic function}. In this game, the characteristic function describes the value of each coalition when its members act together as a unit \cite{Ferguson2014}. An interesting aspect of this theory is that there exists a set of payoff vectors called \emph{the core} for each coalition \cite{Myerson1991}. This set has the property that each member is awarded more through that coalition than if they were working alone. This eliminates the incentive for members to break out of a cooperative context, creating coalitional stability. 
 
 \subsection{Game theory in smart grids}
-\todo{referenties toevoegen en even laten nalezen door mensen die met volgende 2 hoofdstukken bezig waren}
-We are now going to look at the usage of the previously summarised game theory techniques in two smart grid domains: \ac{em} an \ac{dsm}. These two domains are selected because they are currently emerging and they are topics in which a lot of research is being done. They all face challenges which game theory can help solve. 
+We are now going to look at the  application of game theory techniques in two smart grid domains: \ac{em} an \ac{dsm}. We have selected these two domains because they are currently emerging and they are topics in which a lot of research is being done. They all face challenges which game theory can help solve. 
 
 With \ac{em} we will look at the challenges in the generation, storage and transportion of energy with the use of \acp{vpp} and microgrids.
-In \acp{vpp} for example, game theory can be used to find a decent mechanism to fulfil the energy demand. Since most local energy production is based on unpredictable renewable energy sources (wind and solar energy for example), complicated mechanisms are needed to make sure the energy supply will be enough to meet the demand. This is done with mechanism design in combination with co-operative game theory. Microgrids can be seen as subsections of the smart grid. Since energy is saved by keeping produced energy inside its original microgrid, a lot of research is being done on game theory mechanisms that help a microgrid to be independent.
+In \acp{vpp} for example, game theory can be used to find a decent mechanism to fulfil the energy demand. Since most local energy production is based on unpredictable renewable energy sources (wind and solar energy for example), complicated mechanisms are needed to make sure the energy supply will be enough to meet the demand. This is done with mechanism design in combination with cooperative game theory. Microgrids can be seen as subsections of the smart grid. Since energy is saved by keeping produced energy inside its original microgrid, a lot of research is being done on game theory mechanisms that help a microgrid to be independent.
 
 \ac{dsm} in its turn focusses on the energy usage of end users. One of the challenges in which game theory is used inside this domain is in designing mechanisms to calculate the energy price (smart pricing) of locally produced energy. Taken in mind that the energy usage of a user should be in such a way that the user optimally benefits in financial perspective, without making any concessions in his usage. Here comes \ac{vcg} into play. Firstly it gives users an incentive to truthfully report their energy demand, since you can not gain any advantage by lying about it. Besides that \ac{vcg} can help shift the energy consumption to off-peak hours.  
-
-\todo{2. energy consumption scheduling
-non-cooperative congestion game}
