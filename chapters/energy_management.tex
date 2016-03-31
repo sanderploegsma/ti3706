@@ -1,9 +1,8 @@
 \section{Energy management}\label{Energy-Management}
 \todo{Talk about energy management in general, About storage, transportation and generation problems}
-There has been done a lot of research into the energy management in smart grids, utilizing Game Theory\cite{WangOuyangKrishnanEtAl2015, TusharZhangSmithEtAl2013} \todo{need more ref}. Most of these papers don't seem to take into account the size of a smart grid, or try to model all aspects of energy management using one Game Theoretic approach. We choose for a different approach and see energy management having three main aspects, Energy Generation, Energy Storage and Energy transport. For energy generation, we focus on \ac{VPP}s \todo{elaborate}. For Energy storage and transport we focus on microgrids, as microgrids solve the problem of energy loss and interesting energy storage solutions are proposed with the use of microgrids.
+There has been done a lot of research into the energy management in smart grids, utilising Game Theory\cite{WangOuyangKrishnanEtAl2015, TusharZhangSmithEtAl2013}. Most of these papers don't seem to take into account the size of a smart grid, or try to model all aspects of energy management using one Game Theoretic approach. We choose for a different approach and see energy management having three main aspects, Energy Generation, Energy Storage and Energy transport. For energy generation, we focus on \acp{vpp} \todo{elaborate}. For Energy storage and transport we focus on microgrids, as microgrids solve the problem of energy loss and interesting energy storage solutions are proposed with the use of microgrids.
 
-\subsection{VPP's}
-\todo{Key subject: VPP's, Game Theoretic approaches to control and manage the generation of energy}
+\subsection{\aclp{vpp}}
 While individual \acp{der} have the option to sell (portions of) their produced energy to the grid, the number of \acp{der} in the network and their accompanying unreliability makes it hard to account for them in production schedules \cite{RobuKotaChalkiadakisEtAl2012}. It is essential that the grid's independent suppliers are reliable, since the failure to meet production targets could seriously compromise the smooth operation of the network as a whole \cite{ChalkiadakisRobuKotaEtAl2011}. The main concept of a \ac{vpp} illustrates a centralised control structure which connects, controls and visualises a work of these distributed generators \cite{NikonowiczMilewski2012}. Note that these generators can be both fossil and renewable energy sources \cite{LombardiPowalkoRudion2009}. The \ac{vpp} keeps track of its sources' supplies and is able to determine the price. 
 
 \acp{vpp} can be very efficient, as they allow the combination of different energy sources to generate a continuous supply. In other words, resources with different weaknesses and strengths are combined in a complementary way \cite{Koeppel2003}. For example, when a wind turbine and solar cells are combined, the \ac{vpp} is less subject to changing weather conditions \cite{Tromly2001, Kumagai2012, MashhourMoghaddas-Tafreshi2011, NikonowiczMilewski2012}. 
@@ -19,7 +18,7 @@ Within the smart grid, the first approach is probably too simple, the resulting 
 
 To coordinate production and pricing in a fully distributed \ac{vpp}, some form of agent cooperation is needed. To achieve this, mechanism design and cooperative game theory can be combined to derive a pricing mechanism, as well as ways to allocate revenues across agents and manage \ac{vpp} membership \cite{ChalkiadakisRobuKotaEtAl2011}. 
 
-\subsubsection{\ac{der} production estimates}
+\subsection{\acl{der} production estimates}
 \label{vpp:productionestimates}
 To make sure a \ac{vpp} is reliable, it should be able to predict a certain level of energy supply to a microgrid or smart grid. The main issue with this structure is that every \ac{vpp} needs to announce how much energy it is able to produce. Due to the fluctuating nature of renewable energy sources, the prediction of the energy production is not an easy procedure \cite{LombardiPowalkoRudion2009}.  
 

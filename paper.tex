@@ -14,9 +14,19 @@
 
 \usepackage{amsmath}
 
+\newcommand*{\TitleFont}{%
+      \usefont{\encodingdefault}{\rmdefault}{}{n}%
+      \fontsize{28}{32}%
+      \selectfont}
+      
+\newcommand*{\AuthorFont}{%
+      \usefont{\encodingdefault}{\rmdefault}{}{n}%
+      \fontsize{14}{16}%
+      \selectfont}
 
-\title{A survey on game theoretic approaches for the design of smart grids}
-\author{\begin{tabular}{lr}
+
+\title{\TitleFont A Survey on Game Theoretic Approaches for the Design of Smart Grids}
+\author{\AuthorFont\begin{tabular}{lr}
 Daan Schipper & 4155270 \\ 
 Jan-Willem Manenschijn & 4148509\\ 
 Mathijs Hoogland & 4237676 \\ 
@@ -24,7 +34,7 @@ Owen Huang & 4317459 \\
 Ruben Starmans & 4141792 \\ 
 Sander Ploegsma & 4167155\\ 
 Thomas Overklift & 4080890
-\end{tabular} \\\\ Supervised by Dr. Nils Bulling}
+\end{tabular} \\\\\AuthorFont Supervised by Dr. Nils Bulling}
 
 \geometry{
 a4paper,
@@ -69,7 +79,7 @@ total={180mm,230mm}
 \acrodef{vpp}[VPP]{Virtual Power Plant}
 \acrodef{mas}[MAS]{Multi-Agent Systems}
 \acrodef{der}[DER]{Distributed Energy Resource}
-\acrodef{agv}[AGV]{d'Aspremont and Gerard-Varet}
+\acrodef{agv}[AGV]{Arrow-d'Aspremont-Gerard-Varet}
 \acrodef{vcg}[VCG]{Vickrey–Clarke–Groves}
 \acrodef{neq}{Nash equilibrium}
 \acrodef{rtp}[RTP]{Real-Time-Pricing}
