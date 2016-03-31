@@ -18,15 +18,14 @@ Within the smart grid, the first approach is probably too simple, the resulting 
 
 To coordinate production and pricing in a fully distributed \ac{vpp}, some form of agent cooperation is needed. To achieve this, mechanism design and cooperative game theory can be combined to derive a pricing mechanism, as well as ways to allocate revenues across agents and manage \ac{vpp} membership \cite{ChalkiadakisRobuKotaEtAl2011}. 
 
-\subsection{\acl{der} production estimates}
-\label{vpp:productionestimates}
+\paragraph{\acl{der} production estimates}
 To make sure a \ac{vpp} is reliable, it should be able to predict a certain level of energy supply to a microgrid or smart grid. The main issue with this structure is that every \ac{vpp} needs to announce how much energy it is able to produce. Due to the fluctuating nature of renewable energy sources, the prediction of the energy production is not an easy procedure \cite{LombardiPowalkoRudion2009}.  
 
 To get a better view of the energy production estimates within a group of individual \ac{der} agents, a pricing system may be introduced that encourages these agents to provide the \ac{vpp} with accurate estimates \cite{ChalkiadakisRobuKotaEtAl2011}. The proposed system not only encourages large \ac{vpp} sizes, but also promotes truthfulness by basing the payment on the accuracy of the supply prediction. This ensures that both \acp{vpp} and \acp{der} have no incentive to provide a wrong or biased estimate.
 
 Furthermore, \cite{RobuKotaChalkiadakisEtAl2012} notes that a confidence interval is preferred over single point estimates, to remove the uncertainty of those estimates. It also proposes scoring rules, guaranteeing maximum reward if and only if a \ac{der} agent accurately reports its expectation over the prediction error it may make.  
 
-\subsubsection{Coalitional games}
+\paragraph{Coalitional games}
 \label{vpp:coalition}
 \ac{vpp} membership poses another risk in a stable energy production. Should one or more individual \ac{der} agents managed by a \ac{vpp} decide to leave, the decrease in that \ac{vpp}'s production power may be significant. 
 
