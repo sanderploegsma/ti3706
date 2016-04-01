@@ -18,7 +18,7 @@ The requirement that the preferences of each player $i$ be defined over $A$, rat
 \paragraph{Prisoner's Dilemma}
 One of the most famous examples that illustrates a situation that can be modelled by game theory is the Prisoner's Dilemma. This is an example which was formalised by Poundstone \cite{poundstone} and goes like this: 
 
-Two suspects of a crime are arrested and imprisoned separately. If they both confess, each will be convicted and go to jail for 2 years. If only 1 suspect confesses, he will be used as a witness against the other suspect. The witness will be set free, the other suspect will go to jail for 3 years. If they both remain silent, both of them will only serve 1 year in prison. This game can be formalised by $\langle N, (A_i), (u_i) \rangle$ as:
+Two suspects of a crime are arrested and imprisoned separately. If they both confess, each will be convicted and go to jail for two years. If only one suspect confesses, he will be used as a witness against the other suspect. The witness will be set free, the other suspect will go to jail for three years. If they both remain silent, both of them will only serve one year in prison. This game can be formalised by $\langle N, (A_i), (u_i) \rangle$ as:
 \begin{itemize}
 	\item $N = \{a_{1}, a_{2} \}$, the suspects are the players.
     \item $A_1 = A_2 = \{S, C\}$, silent and confess.
@@ -59,7 +59,7 @@ Game theory can be divided into two main branches: non-cooperative game theory a
 It is important to note that non-cooperative does not always imply that the players are not competing, any cooperation that arises must be self-enforcing with no communication or coordination of strategic choices among the players.
 
 \paragraph{Computational challenge} 
-It was not until recent, that researchers proved computing a Nash equilibrium is complete for the complexity class PPAD\cite{daskalakis2009complexity}. This means that deciding if a Nash equilibrium exists is a trivial question, as the answer of all PPAD problems is always yes, a solution always exists. Finding this solution though, cannot be NP-complete, as NP is a class of decision problems. But Daskalakis et al. informally suggest finding a Nash problem is ``as close to NP-complete as it could possibly be'' \cite{daskalakis2009complexity, Aaronson2012}. 
+It was not until recently, that researchers proved computing a Nash equilibrium is complete for the complexity class PPAD\cite{daskalakis2009complexity}. This means that deciding if a Nash equilibrium exists is a trivial question, as the answer of all PPAD problems is always yes, a solution always exists. Finding this solution though, cannot be NP-complete, as NP is a class of decision problems. But Daskalakis et al. informally suggest finding a Nash problem is ``as close to NP-complete as it could possibly be'' \cite{daskalakis2009complexity, Aaronson2012}. 
 As the computations being made by the smart agents will probably be done on low budget hardware, the Nash equilibrium needs to be  approximated with the use of Heuristics. \cite{MicrogridModellingPetrosAristidou,AumannGameTheoryAccomplish} 
 
 \subsection{Examples of commonly used game theoretical concepts}
