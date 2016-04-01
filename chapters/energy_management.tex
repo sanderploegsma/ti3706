@@ -39,10 +39,10 @@ Due to the fact that microgrids are in essence smart grids with geographical lim
 
 To get such a Nash equilibrium a dynamic game can be used. In the microgrid model, this game may contain complete information, meaning that every players revenue function is common knowledge. In the game, all players are equipped with smart agents, and each smart agent determines its strategy and it is assumed that all players seek to maximise their revenue. By using a backwards-induction-outcome, where one would reason back in time using all information available from all players, a Nash equilibrium can be calculated\cite{MicrogridModellingPetrosAristidou}.
 
-Another advantage when using microgrids is the fact that they can help reduce energy loss. The loss of energy with big energy networks is mainly caused by two factors \cite{EnergyLossURL}: 
+Another advantage when using microgrids is the fact that they can help reduce energy loss. The loss of energy with big energy networks is mainly caused by two factors \cite{EnergyLossURL,LasseterPaigi2004}: 
 
 \begin{enumerate}
-\item Energy transmission from power plants to local distributors is done trough power lines, which suffer from losses due to e.g. heat generation\cite{LasseterPaigi2004}.
+\item Energy transmission from power plants to local distributors is done trough power lines, which suffer from losses due to e.g. heat generation.
 \item In an energy grid, each transformer has a certain efficiency, which is never 100\%. Reducing the number of transformers will reduce overall energy loss.
 \end{enumerate}
 
@@ -50,7 +50,7 @@ Microgrids will be able to reduce energy loss because generated power within mic
 
 Whenever some microgrids have an excess of power while others have a need for power, it might be beneficial for these microgrids (and their consumers) to exchange energy among each other instead of requesting it from the main grid \cite{SaadHanPoorEtAl2011}. To manage this, the same cooperative game theory concepts as discussed in \ref{vpp} can be used. When the power loss of a trade is mapped to the value of the corresponding coalition, that power loss can be minimised, contributing to the efficiency of the entire smart grid. 
 
-The buying and selling of energy between microgrids can be guided by another cooperative game theory using auctions, as proposed in \cite{SaadHanPoorEtAl2011}. This involves matching several buyers and sellers within one or more coalition and agreeing on some price. This price $p$ can be obtained through the use of a \emph{double auction}, where all sellers asking $p$ or less and all buyers offering $p$ or more are matched and trade using $p$ \cite{gjerstad1998price}.
+The buying and selling of energy between microgrids can be guided by another cooperative game theory using auctions, as proposed in \cite{SaadHanPoorEtAl2011}. This involves matching several buyers and sellers within one or more coalitions and agreeing on some price. This price $p$ can be obtained through the use of a \emph{double auction}, where all sellers asking $p$ or less and all buyers offering $p$ or more are matched and trade using $p$ \cite{gjerstad1998price}.
 
 One of the challenges that arises in microgrids is the routing of energy. It is beneficial to find an optimal routing schedule because this helps in fully utilising the distributed energy resources and decreases the cost of energy transmissions \cite{HongKim2016}. This routing task is, in a lot of ways, comparable to the traditional routing protocols. These traditional protocols often use cooperative game theory models to provide tools for analysing selfishness and complex interactions between network nodes \cite{PavlidouKoltsidas2008}. Energy routers exchange for example the energy information of each home in the data network and try to find the most effective transaction and effective transmission path in the energy network for energy sharing among homes\cite{YoonKimChang2013}. A big difference however is that the traditional routing protocols have a data plane, where in microgrids this is replaced for an energy plane.
 
