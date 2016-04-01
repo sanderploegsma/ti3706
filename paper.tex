@@ -1,6 +1,7 @@
-\documentclass[11pt,twocolumn]{article}
+\documentclass[11pt,]{article}
 \usepackage[utf8]{inputenc}
 \usepackage{parskip}
+\usepackage{multicol}
 \usepackage{hyperref}
 \usepackage{xcolor}
 \usepackage{geometry}
@@ -8,9 +9,6 @@
 \usepackage[raggedright]{titlesec}
 \usepackage{cite}
 \usepackage{amssymb}
-
-\usepackage{graphicx}
-\usepackage{float}
 
 \usepackage{amsmath}
 
@@ -23,7 +21,6 @@
       \usefont{\encodingdefault}{\rmdefault}{}{n}%
       \fontsize{12}{14}%
       \selectfont}
-
 
 \title{\TitleFont A Survey on Game Theoretic Approaches for the Design of Smart Grids}
 \author{\AuthorFont\begin{tabular}{lr}
@@ -42,9 +39,9 @@ total={180mm,230mm}
 }
 \setlength{\columnsep}{8mm}
 
-\titlespacing{\section}{0pt}{8pt plus 2pt minus 2pt}{0pt plus 2pt minus 2pt}
-\titlespacing{\subsection}{0pt}{6pt plus 2pt minus 2pt}{0pt plus 2pt minus 2pt}
-\titlespacing{\subsubsection}{0pt}{3pt plus 2pt minus 2pt}{0pt plus 2pt minus 2pt}
+\titlespacing{\section}{0pt}{8pt}{0pt}
+\titlespacing{\subsection}{0pt}{6pt}{0pt}
+\titlespacing{\subsubsection}{0pt}{3pt}{0pt}
 %\titlespacing\paragraph{0pt}{3pt plus 2pt minus 2pt}{1em}
 
 \renewenvironment{quote}
@@ -62,15 +59,6 @@ total={180mm,230mm}
 \newcommand{\fix}[1]{{\color{fix}\textbf{FIX: } #1}}
 \newcommand{\fb}[1]{{\color{feedback}\textbf{FEEDBACK:} #1}}
 
-% --------------------------------------------
-% Begin of document
-% --------------------------------------------
-
-\begin{document}
-
-\maketitle
-
-\input{chapters/abstract}
 
 % --------------------------------------------
 % Acronym definitions
@@ -85,12 +73,21 @@ total={180mm,230mm}
 \acrodef{rtp}[RTP]{Real-Time-Pricing}
 \acrodef{em}[EM]{Energy Management}
 
-%\tableofcontents
+% --------------------------------------------
+% Begin of document
+% --------------------------------------------
+
+\begin{document}
+
+\maketitle
 
 % --------------------------------------------
 % CHAPTERS
 % --------------------------------------------
 
+\begin{multicols*}{2}
+\raggedcolumns
+\input{chapters/abstract}
 \input{chapters/introduction}
 \input{chapters/gametheory}
 \input{chapters/energy_management}
@@ -103,5 +100,6 @@ total={180mm,230mm}
 
 \bibliographystyle{ieeetr}
 \bibliography{bibliography}	
+\end{multicols*}
 
 \end{document}
