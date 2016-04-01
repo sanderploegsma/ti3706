@@ -1,7 +1,7 @@
-\documentclass[11pt,]{article}
+\documentclass[11pt]{article}
 \usepackage[utf8]{inputenc}
 \usepackage{parskip}
-\usepackage{multicol}
+\usepackage{multicol, caption}
 \usepackage{hyperref}
 \usepackage{xcolor}
 \usepackage{geometry}
@@ -9,7 +9,8 @@
 \usepackage[raggedright]{titlesec}
 \usepackage{cite}
 \usepackage{amssymb}
-
+\usepackage{graphicx}
+\usepackage{float}
 \usepackage{amsmath}
 
 \newcommand*{\TitleFont}{%
@@ -46,8 +47,21 @@ total={180mm,230mm}
 
 \renewenvironment{quote}
 {\small\list{}{\rightmargin=5mm \leftmargin=5mm}%
-   \item\relax}
+   \item \relax}
   {\endlist}
+  
+\renewenvironment{abstract}
+ {{\Large\bfseries \abstractname\vspace{-.5em}\vspace{12pt}}
+  \list{}{%
+    \setlength{\leftmargin}{0mm}% <---------- CHANGE HERE
+    \setlength{\rightmargin}{\leftmargin}%
+  }%
+  \item\relax}
+ {\endlist}
+  
+\newenvironment{Float}
+  {\par\medskip\noindent\minipage{\linewidth}}
+  {\endminipage\par\medskip}
 
 \definecolor{todo}{RGB}{3,166,90}
 \definecolor{fix}{RGB}{217,61,61}
