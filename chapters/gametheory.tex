@@ -11,7 +11,7 @@ We can define normal form game theoretic games $\langle N, (A_i), (u_i) \rangle$
     \item for each player $i \in N$ a payoff function $u_i: A = A_1 \ldots A_{|N|} \rightarrow \mathbb{R}$
 \end{itemize}
 
-If the set $A_i$ of actions of every player $i$ is finite then the game is $finite$
+If the set $A_i$ of actions of every player $i$ is finite then the game is \emph{finite}
 
 The requirement that the preferences of each player $i$ be defined over $A$, rather than $A_{i}$, is the feature that distinguishes a strategic game from a decision problem: each player's decision is usually affected by the decisions of other players \cite{CourseInGameTheory}.
 
@@ -59,15 +59,15 @@ Game theory can be divided into two main branches: non-cooperative game theory a
 It is important to note that non-cooperative does not always imply that the players are not competing, any cooperation that arises must be self-enforcing with no communication or coordination of strategic choices among the players.
 
 \paragraph{Computational challenge} 
-It was not until recently, that researchers proved computing a Nash equilibrium is complete for the complexity class PPAD\cite{daskalakis2009complexity}. This means that deciding if a Nash equilibrium exists is a trivial question, as the answer of all PPAD problems is always yes, a solution always exists. Finding this solution though, cannot be NP-complete, as NP is a class of decision problems. But Daskalakis et al. informally suggest finding a Nash problem is ``as close to NP-complete as it could possibly be'' \cite{daskalakis2009complexity, Aaronson2012}. 
-As the computations being made by the smart agents will probably be done on low budget hardware, the Nash equilibrium needs to be  approximated with the use of Heuristics. \cite{MicrogridModellingPetrosAristidou,AumannGameTheoryAccomplish} 
+It was not until recently that researchers proved computing a Nash equilibrium is complete for the complexity class PPAD\cite{daskalakis2009complexity}. This means that deciding if a Nash equilibrium exists is a trivial question. Since the answer of all PPAD problems is yes, a solution always exists. Finding this solution though cannot be NP-complete as NP is a class of decision problems. But \cite{daskalakis2009complexity} informally suggest finding a Nash problem is ``as close to NP-complete as it could possibly be'' \cite{daskalakis2009complexity, Aaronson2012}. 
+As the computations being made by the smart agents will probably be done on low budget hardware, the Nash equilibrium needs to be  approximated with the use of heuristics. \cite{MicrogridModellingPetrosAristidou,AumannGameTheoryAccomplish} 
 
 \subsection{Examples of commonly used game theoretical concepts}
 In this subsection we will briefly discuss some game theory concepts used in the following chapters. The aim of this survey is not to give a detailed explanation of each concept, but to give a summarised overview.
 
 In contrast to normal form games where players take a single action, extensive-form games allow to model sequential decision making. This allows for models where players can choose their strategy at any point in time.
 
-A stochastic game is a dynamic play that proceeds from position to position \cite{Shapley1953} and can be played by one or more players. Quite a few papers have been written about stochastic games in the smart grid \cite{LiangZhuang2014,nguyen2013game} because they are good to characterise the randomness in renewable power generation. For example routing protocols in microgrids use stochastic game theory.
+A stochastic game is a dynamic play that proceeds from position to position \cite{Shapley1953} and can be played by one or more players. Quite a few papers have been written about stochastic games in the smart grid  because they are good to characterise the randomness in renewable power generation\cite{LiangZhuang2014,nguyen2013game}. For example routing protocols in microgrids use stochastic game theory.
 
 Bayesian games are a non-cooperative game type where the information about the strategies and objective function of the other players is incomplete. Given the large nature of the smart grid, the amount of players involved, it is quite possible that players in any game model might face technical difficulties in estimating the strategies or objectives of the other players \cite{keypaper}. With this in mind, bayesian games can overcome a lot of these difficulties.
 
